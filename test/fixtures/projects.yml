@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  profile: one
+  description: MyString
+  goal: 1
+  actual_amount: 1
+  date_limit: 2018-04-12
+  cfunders: 1
+
+two:
+  name: MyString
+  profile: two
+  description: MyString
+  goal: 1
+  actual_amount: 1
+  date_limit: 2018-04-12
+  cfunders: 1
