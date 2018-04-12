@@ -8,7 +8,7 @@ class Profile < ApplicationRecord
 	has_many :fund
 
 	validates :description, length: {maximum: 500}
-	validates :last_session, presence: true
+	validates :last_sesion, presence: true
 
 	
 

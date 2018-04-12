@@ -13,7 +13,7 @@ class Project < ApplicationRecord
 	validates :actual_amount, presence: true
 	validates :date_limit, presence: true
 	validates :cfunders, presence:true
-	validates :date_cannot_be_past
+	validate :date_cannot_be_past
 
 	def date_cannot_be_past
 		if date_limit.present? && date_limit < Date.today

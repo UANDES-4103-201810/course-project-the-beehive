@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  email: MyString
+  mail: MyString
   password: MyString
-  privilege: MyString
+  privileges: MyString
 
 two:
-  email: MyString
+  mail: MyString
   password: MyString
-  privilege: MyString
+  privileges: MyString

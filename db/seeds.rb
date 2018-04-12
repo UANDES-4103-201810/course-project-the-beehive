@@ -6,13 +6,13 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-user_1 = User.create(email: 'gpvicuna@miuandes.cl',password: 'password123', privilege: 'admin')
-user_2 = User.create(email: 'ByronFerrari@gmail.cl',password: 'password123', privilege: 'registered')
-user_3 = User.create(email: '1@nomail.cl',password: '0', privilege: 'guest')
+user_1 = User.create(mail: 'gpvicuna@miuandes.cl',password: 'password123', privileges: 'admin')
+user_2 = User.create(mail: 'ByronFerrari@gmail.cl',password: 'password123', privileges: 'registered')
+user_3 = User.create(mail: '1@nomail.cl',password: '0', privileges: 'guest')
 
 
-profile_1 = Profile.create( user: user_1 , name: "Gustavo Vicunia", image: "image 1", desciption: "Primer y unico admin", last_sesion: 20181204)
-profile_2 = Profile.create( user: user_2 , name: "Byron Ferrari", image: "image 2", desciption: "El mas pulento", last_sesion: 20181205)
+profile_1 = Profile.create( user: user_1 , name: "Gustavo Vicunia", image: "image 1", description: "Primer y unico admin", last_sesion: 20181204)
+profile_2 = Profile.create( user: user_2 , name: "Byron Ferrari", image: "image 2", description: "El mas pulento", last_sesion: 20181205)
 
 
 project_1 = Project.create(name: "Un audifono para un flaite", profile: profile_2, description: "asdasd", goal: 100, actual_amount: 5 , date_limit: DateTime.new(2019, 05, 15) ,cfunders: 5)
