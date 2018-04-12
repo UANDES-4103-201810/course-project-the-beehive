@@ -7,4 +7,9 @@ class Profile < ApplicationRecord
 	has_many :web
 	has_many :fund
 
+	validates :description, length: {maximum: 500}
+	validates :last_session, presence: true
+
+	
+
 end

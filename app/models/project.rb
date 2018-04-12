@@ -7,4 +7,11 @@ class Project < ApplicationRecord
 	has_many :favorite
 	has_many :fund
 
+	validates :name, presence: true
+	validates :description, length: {maximum: 1000}
+	validates :goal, presence: true
+	validates :actual_amount, presence: true
+	validates :date_limit, presence: true
+	validates :cfunders, presence:true
+
 end
