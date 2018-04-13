@@ -1,0 +1,17 @@
+<%= form_with(model: promise, local: true) do |form| %>
+  <% if promise.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(promise.errors.count, "error") %> prohibited this promise from being saved:</h2>
+
+      <ul>
+      <% promise.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
