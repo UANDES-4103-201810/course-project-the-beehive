@@ -32,4 +32,4 @@ phone_1 = Phone.create( phone:"987654321", profile: profile_1)
 
 mail_1 = Mail.create( mail:"a@s.com", profile: profile_1)
 
-comment_1 = Comment.create( user: user_1 , project: project_2, content:"wena wena", time_wrote: Time.new(10,10,10), date_wrote:DateTime.new(2018,10,16)
+comment_1 = Comment.create( user: user_1 , project: project_2, content:"wena wena", time_wrote: Time.new(10,10,10), date_wrote:DateTime.new(2018,10,16))
