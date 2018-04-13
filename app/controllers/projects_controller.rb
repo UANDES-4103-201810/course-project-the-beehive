@@ -5,11 +5,14 @@ class ProjectsController < ApplicationController
   # GET /projects.json
   def index
     @projects = Project.all
+    render json: @project
   end
 
   # GET /projects/1
   # GET /projects/1.json
   def show
+    @project = Project.find(params[:name])
+    render json: @project
   end
 
   # GET /projects/new
@@ -19,11 +22,13 @@ class ProjectsController < ApplicationController
 
   # GET /projects/1/edit
   def edit
+    @project = Project.find(params[:name])
   end
 
   # POST /projects
   # POST /projects.json
   def create
+   # @project = Project.create(name: params[:name] , profile: params[:profile], description: params[:description],goal: params[:goal], actual_amount: params[:actual_amount], date_limit: params[:date_limit], cfunders: params[:cfunders])
     @project = Project.new(project_params)
 
     respond_to do |format|

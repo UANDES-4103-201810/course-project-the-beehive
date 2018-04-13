@@ -5,11 +5,14 @@ class PromisesController < ApplicationController
   # GET /promises.json
   def index
     @promises = Promise.all
+    render json: @promises
   end
 
   # GET /promises/1
   # GET /promises/1.json
   def show
+    @promises = Promise.find(params[:project])
+    render json: @promises
   end
 
   # GET /promises/new
@@ -19,11 +22,13 @@ class PromisesController < ApplicationController
 
   # GET /promises/1/edit
   def edit
+    @promises = Promise.find(params[:project])
   end
 
   # POST /promises
   # POST /promises.json
   def create
+  #  @promise = Promise.create(project: params[:project] ,description: params[:description],min_sum: params[:min_sum],estimated_arrival: params[:estimated_arrival], cfunders: params[:cfunders])
     @promise = Promise.new(promise_params)
 
     respond_to do |format|

@@ -5,11 +5,14 @@ class ProfilesController < ApplicationController
   # GET /profiles.json
   def index
     @profiles = Profile.all
+    render json: @project
   end
 
   # GET /profiles/1
   # GET /profiles/1.json
   def show
+    @project = Project.find(params[:name])
+    render json: @project
   end
 
   # GET /profiles/new
@@ -19,13 +22,14 @@ class ProfilesController < ApplicationController
 
   # GET /profiles/1/edit
   def edit
+    @project = Project.find(params[:name])
   end
 
   # POST /profiles
   # POST /profiles.json
   def create
+   # @profile = Profile.create( user: params[:user] ,name: params[:name], image: params[:image], description: params[:description], last_sesion: params[:last_sesion])
     @profile = Profile.new(profile_params)
-
     respond_to do |format|
       if @profile.save
         format.html { redirect_to @profile, notice: 'Profile was successfully created.' }

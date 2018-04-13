@@ -5,11 +5,14 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @users = User.all
+    render json: @user
   end
 
   # GET /users/1
   # GET /users/1.json
   def show
+    @user = User.find(params[:mail])
+    render json: @user
   end
 
   # GET /users/new
@@ -19,13 +22,15 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
+    user = User.find(params[:mail])
+  #  user = User.update(mail: params[:mail],password: params[:password], privileges: params[:privileges])
   end
 
   # POST /users
   # POST /users.json
   def create
+  #  @user = User.create(mail: params[:mail],password: params[:password], privileges: params[:privileges])
     @user = User.new(user_params)
-
     respond_to do |format|
       if @user.save
         format.html { redirect_to @user, notice: 'User was successfully created.' }
@@ -54,6 +59,7 @@ class UsersController < ApplicationController
   # DELETE /users/1
   # DELETE /users/1.json
   def destroy
+   # @user = User.delete(mail: params[:mail],password: params[:password], privileges: params[:privileges])
     @user.destroy
     respond_to do |format|
       format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
