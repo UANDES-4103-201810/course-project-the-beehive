@@ -5,13 +5,13 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @users = User.all
-    render json: @user
+    render json: @users
   end
 
   # GET /users/1
   # GET /users/1.json
   def show
-    @user = User.find(params[:mail])
+    @user = User.find(params[:id])
     render json: @user
   end
 
@@ -22,7 +22,7 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
-    user = User.find(params[:mail])
+    user = User.find(params[:id])
   #  user = User.update(mail: params[:mail],password: params[:password], privileges: params[:privileges])
   end
 
@@ -60,7 +60,7 @@ class UsersController < ApplicationController
   # DELETE /users/1.json
   def destroy
    # @user = User.delete(mail: params[:mail],password: params[:password], privileges: params[:privileges])
-    @user.destroy
+    User.destroy(params[:id])
     respond_to do |format|
       format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
       format.json { head :no_content }

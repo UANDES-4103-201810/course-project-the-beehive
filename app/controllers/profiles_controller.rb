@@ -5,14 +5,14 @@ class ProfilesController < ApplicationController
   # GET /profiles.json
   def index
     @profiles = Profile.all
-    render json: @project
+    render json: @profiles
   end
 
   # GET /profiles/1
   # GET /profiles/1.json
   def show
-    @project = Project.find(params[:name])
-    render json: @project
+    @profile = Profile.find(params[:id])
+    render json: @profile
   end
 
   # GET /profiles/new
@@ -22,7 +22,7 @@ class ProfilesController < ApplicationController
 
   # GET /profiles/1/edit
   def edit
-    @project = Project.find(params[:name])
+    @profile = Profile.find(params[:id])
   end
 
   # POST /profiles
@@ -58,7 +58,7 @@ class ProfilesController < ApplicationController
   # DELETE /profiles/1
   # DELETE /profiles/1.json
   def destroy
-    @profile.destroy
+    Profile.destroy(params[:id])
     respond_to do |format|
       format.html { redirect_to profiles_url, notice: 'Profile was successfully destroyed.' }
       format.json { head :no_content }

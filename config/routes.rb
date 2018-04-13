@@ -9,31 +9,31 @@ Rails.application.routes.draw do
 
   #users
   get '/users', to: 'users#index'
-  get '/users/:mail', to: 'users#show'
+  get '/users/:id', to: 'users#show'
   post '/users', to: 'users#create'
-  delete '/users/:mail', to: 'users#destroy'
-  patch '/users/:mail', to: 'users#edit'
+  delete '/users/:id', to: 'users#destroy'
+  patch '/users/:id', to: 'users#edit'
 
   #profiles
   get '/profiles', to: 'profiles#index'
-  get '/profiles/:name', to: 'profiles#show'
+  get '/profiles/:id', to: 'profiles#show'
   post '/profiles', to: 'profiles#create'
-  delete '/profiles/:name', to: 'profiles#destroy'
-  patch '/profiles/:name', to: 'profiles#edit'
+  delete '/profiles/:id', to: 'profiles#destroy'
+  patch '/profiles/:id', to: 'profiles#edit'
 
   #projects
   get '/projects', to: 'projects#index'
-  get '/projects/:name', to: 'projects#show'
+  get '/projects/:id', to: 'projects#show'
   post '/projects', to: 'projects#create'
-  delete '/projects/:name', to: 'projects#destroy'
-  patch '/projects/:name', to: 'projects#edit'
+  delete '/projects/:id', to: 'projects#destroy'
+  patch '/projects/:id', to: 'projects#edit'
 
   #promises
   get '/promises', to: 'promises#index'
-  get '/promises/:project', to: 'promises#show'
+  get '/promises/:id', to: 'promises#show'
   post '/promises', to: 'promises#create'
-  delete '/promises/:project', to: 'promises#destroy'
-  patch '/promises/:project', to: 'promises#edit'
+  delete '/promises/:id', to: 'promises#destroy'
+  patch '/promises/:id', to: 'promises#edit'
 
 
 

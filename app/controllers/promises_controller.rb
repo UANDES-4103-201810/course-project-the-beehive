@@ -11,7 +11,7 @@ class PromisesController < ApplicationController
   # GET /promises/1
   # GET /promises/1.json
   def show
-    @promises = Promise.find(params[:project])
+    @promises = Promise.find(params[:id])
     render json: @promises
   end
 
@@ -22,7 +22,7 @@ class PromisesController < ApplicationController
 
   # GET /promises/1/edit
   def edit
-    @promises = Promise.find(params[:project])
+    @promises = Promise.find(params[:id])
   end
 
   # POST /promises
@@ -59,7 +59,7 @@ class PromisesController < ApplicationController
   # DELETE /promises/1
   # DELETE /promises/1.json
   def destroy
-    @promise.destroy
+    Promise.destroy(params[:id])
     respond_to do |format|
       format.html { redirect_to promises_url, notice: 'Promise was successfully destroyed.' }
       format.json { head :no_content }
