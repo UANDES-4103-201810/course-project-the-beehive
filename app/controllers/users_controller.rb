@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  skip_before_action :verify_authenticity_token
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   # GET /users
@@ -28,8 +29,13 @@ class UsersController < ApplicationController
 
   # POST /users
   # POST /users.json
+
+  def gettocreate
+    @user = User.new([mail: params[:mail],password: params[:password], privileges: params[:privileges]])
+    @user.save
+  end
+
   def create
-  #  @user = User.create(mail: params[:mail],password: params[:password], privileges: params[:privileges])
     @user = User.new(user_params)
     respond_to do |format|
       if @user.save

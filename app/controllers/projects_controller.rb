@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+  skip_before_action :verify_authenticity_token
   before_action :set_project, only: [:show, :edit, :update, :destroy]
 
   # GET /projects
@@ -59,7 +60,7 @@ class ProjectsController < ApplicationController
   # DELETE /projects/1
   # DELETE /projects/1.json
   def destroy
-    @project.destroy
+    @project.destroy(params[:id])
     respond_to do |format|
       format.html { redirect_to projects_url, notice: 'Project was successfully destroyed.' }
       format.json { head :no_content }
