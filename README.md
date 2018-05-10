@@ -1,4 +1,4 @@
-The Beehive
+#The Beehive
 
-Integrants:
+##Integrants:
 Ignacio Parragué, Gustavo Vicuña
