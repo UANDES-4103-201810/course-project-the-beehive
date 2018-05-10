@@ -17,7 +17,7 @@ class PromisesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create promise" do
     assert_difference('Promise.count') do
-      post promises_url, params: { promise: {  } }
+      post promises_url, params: { promise: { buyers: @promise.buyers, delivery_date: @promise.delivery_date, description: @promise.description, min: @promise.min, project_id: @promise.project_id } }
     end
 
     assert_redirected_to promise_url(Promise.last)
@@ -34,7 +34,7 @@ class PromisesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update promise" do
-    patch promise_url(@promise), params: { promise: {  } }
+    patch promise_url(@promise), params: { promise: { buyers: @promise.buyers, delivery_date: @promise.delivery_date, description: @promise.description, min: @promise.min, project_id: @promise.project_id } }
     assert_redirected_to promise_url(@promise)
   end
 

@@ -10,110 +10,101 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_04_13_104532) do
+ActiveRecord::Schema.define(version: 2018_05_10_215642) do
 
   create_table "comments", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "project_id"
     t.string "content"
-    t.time "time_wrote"
-    t.date "date_wrote"
+    t.integer "user_id_id"
+    t.integer "project_id_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["project_id"], name: "index_comments_on_project_id"
-    t.index ["user_id"], name: "index_comments_on_user_id"
+    t.index ["project_id_id"], name: "index_comments_on_project_id_id"
+    t.index ["user_id_id"], name: "index_comments_on_user_id_id"
+  end
+
+  create_table "emails", force: :cascade do |t|
+    t.string "mail"
+    t.integer "user_id_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id_id"], name: "index_emails_on_user_id_id"
   end
 
   create_table "favorites", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "project_id"
+    t.integer "user_id_id"
+    t.integer "project_id_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["project_id"], name: "index_favorites_on_project_id"
-    t.index ["user_id"], name: "index_favorites_on_user_id"
+    t.index ["project_id_id"], name: "index_favorites_on_project_id_id"
+    t.index ["user_id_id"], name: "index_favorites_on_user_id_id"
   end
 
-  create_table "images", force: :cascade do |t|
-    t.string "image"
-    t.integer "project_id"
+  create_table "funds", force: :cascade do |t|
+    t.integer "user_id_id"
+    t.integer "project_id_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["project_id"], name: "index_images_on_project_id"
-  end
-
-  create_table "mails", force: :cascade do |t|
-    t.string "mail"
-    t.integer "profile_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["profile_id"], name: "index_mails_on_profile_id"
+    t.index ["project_id_id"], name: "index_funds_on_project_id_id"
+    t.index ["user_id_id"], name: "index_funds_on_user_id_id"
   end
 
   create_table "phones", force: :cascade do |t|
-    t.string "phone"
-    t.integer "profile_id"
+    t.string "number"
+    t.integer "user_id_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["profile_id"], name: "index_phones_on_profile_id"
-  end
-
-  create_table "profiles", force: :cascade do |t|
-    t.integer "user_id"
-    t.string "name"
-    t.string "image"
-    t.string "description"
-    t.string "last_sesion"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_profiles_on_user_id"
+    t.index ["user_id_id"], name: "index_phones_on_user_id_id"
   end
 
   create_table "projects", force: :cascade do |t|
     t.string "name"
-    t.integer "profile_id"
+    t.integer "user_id"
     t.string "description"
     t.integer "goal"
-    t.integer "actual_amount"
+    t.integer "actual"
     t.date "date_limit"
-    t.integer "cfunders"
+    t.integer "funders"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["profile_id"], name: "index_projects_on_profile_id"
+    t.index ["user_id"], name: "index_projects_on_user_id"
   end
 
   create_table "promises", force: :cascade do |t|
     t.integer "project_id"
     t.string "description"
-    t.integer "min_sum"
-    t.date "estimated_arrival"
-    t.integer "cfunders"
+    t.integer "min"
+    t.date "delivery_date"
+    t.integer "buyers"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["project_id"], name: "index_promises_on_project_id"
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "mail"
-    t.string "password"
-    t.string "privileges"
+  create_table "purchases", force: :cascade do |t|
+    t.integer "user_id_id"
+    t.integer "promise_id_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["promise_id_id"], name: "index_purchases_on_promise_id_id"
+    t.index ["user_id_id"], name: "index_purchases_on_user_id_id"
   end
 
-  create_table "videos", force: :cascade do |t|
-    t.string "video"
-    t.integer "project_id"
+  create_table "users", force: :cascade do |t|
+    t.string "email"
+    t.string "password"
+    t.string "name"
+    t.string "description"
+    t.date "last_session"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["project_id"], name: "index_videos_on_project_id"
   end
 
   create_table "webs", force: :cascade do |t|
-    t.string "webpage"
-    t.integer "profile_id"
+    t.string "url"
+    t.integer "user_id_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["profile_id"], name: "index_webs_on_profile_id"
+    t.index ["user_id_id"], name: "index_webs_on_user_id_id"
   end
 
 end

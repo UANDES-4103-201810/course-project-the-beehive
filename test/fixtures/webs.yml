@@ -1,9 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  webpage: MyString
-  profile: one
+  url: MyString
+  user_id: one
 
 two:
-  webpage: MyString
-  profile: two
+  url: MyString
+  user_id: two

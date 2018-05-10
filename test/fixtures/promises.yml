@@ -3,13 +3,13 @@
 one:
   project: one
   description: MyString
-  min_sum: 1
-  estimated_arrival: 2018-04-12
-  cfunders: 1
+  min: 1
+  delivery_date: 2018-05-10
+  buyers: 1
 
 two:
   project: two
   description: MyString
-  min_sum: 1
-  estimated_arrival: 2018-04-12
-  cfunders: 1
+  min: 1
+  delivery_date: 2018-05-10
+  buyers: 1

@@ -14,6 +14,11 @@ class PromisesTest < ApplicationSystemTestCase
     visit promises_url
     click_on "New Promise"
 
+    fill_in "Buyers", with: @promise.buyers
+    fill_in "Delivery Date", with: @promise.delivery_date
+    fill_in "Description", with: @promise.description
+    fill_in "Min", with: @promise.min
+    fill_in "Project", with: @promise.project_id
     click_on "Create Promise"
 
     assert_text "Promise was successfully created"
@@ -24,6 +29,11 @@ class PromisesTest < ApplicationSystemTestCase
     visit promises_url
     click_on "Edit", match: :first
 
+    fill_in "Buyers", with: @promise.buyers
+    fill_in "Delivery Date", with: @promise.delivery_date
+    fill_in "Description", with: @promise.description
+    fill_in "Min", with: @promise.min
+    fill_in "Project", with: @promise.project_id
     click_on "Update Promise"
 
     assert_text "Promise was successfully updated"

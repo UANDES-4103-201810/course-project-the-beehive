@@ -1,9 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  number: MyString
   user_id: one
+  promise_id: one
 
 two:
-  number: MyString
   user_id: two
+  promise_id: two

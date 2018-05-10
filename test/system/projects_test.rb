@@ -14,6 +14,13 @@ class ProjectsTest < ApplicationSystemTestCase
     visit projects_url
     click_on "New Project"
 
+    fill_in "Actual", with: @project.actual
+    fill_in "Date Limit", with: @project.date_limit
+    fill_in "Description", with: @project.description
+    fill_in "Funders", with: @project.funders
+    fill_in "Goal", with: @project.goal
+    fill_in "Name", with: @project.name
+    fill_in "User", with: @project.user_id
     click_on "Create Project"
 
     assert_text "Project was successfully created"
@@ -24,6 +31,13 @@ class ProjectsTest < ApplicationSystemTestCase
     visit projects_url
     click_on "Edit", match: :first
 
+    fill_in "Actual", with: @project.actual
+    fill_in "Date Limit", with: @project.date_limit
+    fill_in "Description", with: @project.description
+    fill_in "Funders", with: @project.funders
+    fill_in "Goal", with: @project.goal
+    fill_in "Name", with: @project.name
+    fill_in "User", with: @project.user_id
     click_on "Update Project"
 
     assert_text "Project was successfully updated"
