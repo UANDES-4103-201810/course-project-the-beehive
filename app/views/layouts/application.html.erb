@@ -1,30 +1,15 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title> the beehive</title>
-  <link href="../../assets/stylesheets/main.css" rel="stylesheet" type="text/css"/>
-</head>
+  <head>
+    <title>Beehive</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
 
-<body>
-<header>
-  <div>
-    <nav>
-      <ul>
-        <li><img source="" alt="logo"></li>
-        <li><a href="#Home"> Home </a></li>
-        <li class="float_center"><h1>The Beehive</h1></li>
-        <li class="float_right"><a href="#Register"> Register</a></li>
-        <li class="float_right"><a href="#Log_in"> Log In</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
 
-
-<div>
-
-
-</div>
-
-
-</body>
+  <body>
+    <%= yield %>
+  </body>
+</html>

@@ -1,7 +1,4 @@
 class Purchase < ApplicationRecord
-
-
-	belongs_to :promise
-	belongs_to :user
-
+  belongs_to :user
+  belongs_to :promise
 end

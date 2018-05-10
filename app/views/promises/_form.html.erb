@@ -11,6 +11,31 @@
     </div>
   <% end %>
 
+  <div class="field">
+    <%= form.label :project_id %>
+    <%= form.text_field :project_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :min %>
+    <%= form.number_field :min %>
+  </div>
+
+  <div class="field">
+    <%= form.label :delivery_date %>
+    <%= form.date_select :delivery_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :buyers %>
+    <%= form.number_field :buyers %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

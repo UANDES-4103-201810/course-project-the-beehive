@@ -5,6 +5,11 @@
 <table>
   <thead>
     <tr>
+      <th>Project</th>
+      <th>Description</th>
+      <th>Min</th>
+      <th>Delivery date</th>
+      <th>Buyers</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -12,6 +17,11 @@
   <tbody>
     <% @promises.each do |promise| %>
       <tr>
+        <td><%= promise.project %></td>
+        <td><%= promise.description %></td>
+        <td><%= promise.min %></td>
+        <td><%= promise.delivery_date %></td>
+        <td><%= promise.buyers %></td>
         <td><%= link_to 'Show', promise %></td>
         <td><%= link_to 'Edit', edit_promise_path(promise) %></td>
         <td><%= link_to 'Destroy', promise, method: :delete, data: { confirm: 'Are you sure?' } %></td>

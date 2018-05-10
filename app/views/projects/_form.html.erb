@@ -11,6 +11,41 @@
     </div>
   <% end %>
 
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :goal %>
+    <%= form.number_field :goal %>
+  </div>
+
+  <div class="field">
+    <%= form.label :actual %>
+    <%= form.number_field :actual %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_limit %>
+    <%= form.date_select :date_limit %>
+  </div>
+
+  <div class="field">
+    <%= form.label :funders %>
+    <%= form.number_field :funders %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

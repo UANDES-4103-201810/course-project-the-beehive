@@ -1,5 +1,3 @@
 class Web < ApplicationRecord
-
-	belongs_to :profile
-	validates :webpage,presence: true
+  belongs_to :user
 end

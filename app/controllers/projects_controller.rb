@@ -1,19 +1,15 @@
 class ProjectsController < ApplicationController
-  skip_before_action :verify_authenticity_token
   before_action :set_project, only: [:show, :edit, :update, :destroy]
 
   # GET /projects
   # GET /projects.json
   def index
     @projects = Project.all
-    render json: @projects
   end
 
   # GET /projects/1
   # GET /projects/1.json
   def show
-    @project = Project.find(params[:id])
-    render json: @project
   end
 
   # GET /projects/new
@@ -23,13 +19,11 @@ class ProjectsController < ApplicationController
 
   # GET /projects/1/edit
   def edit
-    @project = Project.find(params[:id])
   end
 
   # POST /projects
   # POST /projects.json
   def create
-   # @project = Project.create(name: params[:name] , profile: params[:profile], description: params[:description],goal: params[:goal], actual_amount: params[:actual_amount], date_limit: params[:date_limit], cfunders: params[:cfunders])
     @project = Project.new(project_params)
 
     respond_to do |format|
@@ -60,7 +54,7 @@ class ProjectsController < ApplicationController
   # DELETE /projects/1
   # DELETE /projects/1.json
   def destroy
-    @project.destroy(params[:id])
+    @project.destroy
     respond_to do |format|
       format.html { redirect_to projects_url, notice: 'Project was successfully destroyed.' }
       format.json { head :no_content }
@@ -75,6 +69,6 @@ class ProjectsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
-      params.fetch(:project, {})
+      params.require(:project).permit(:name, :user_id, :description, :goal, :actual, :date_limit, :funders)
     end
 end
