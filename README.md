@@ -22,7 +22,4 @@ Finally, you'll be ready to run the app in a local server:
 ```
 $ rails server
 ```
-## A quick look
-
-For a quick look to our app click this link: https://salty-garden-93107.herokuapp.com/ and see our progress.
 
