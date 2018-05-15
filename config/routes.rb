@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  get 'pages/home', to: 'pages#home'
-  get 'pages/login', to: 'pages#login'
+  get '/home', to: 'pages#home'
+  get '/login', to: 'pages#login'
+  get '/about', to: 'pages#about'
   get '/register', to: 'users#new'
   post '/register', to: 'users#create'
   get '/users/:id/settings', to: 'users#edit'

@@ -15,6 +15,7 @@ $gray-medium-light: #eaeaea;
 
 body {
   padding-top: 60px;
+  background-image: url("wood-wallpaper.jpg")
 }
 
 section {
@@ -32,10 +33,19 @@ textarea {
   }
 }
 
+.jumbotron{
+  background: rgba(255,204,0,.5);
+}
+
+.btn{
+
+}
+
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
+  color: white
 }
 
 h1 {
@@ -51,12 +61,16 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: lightgray;
 }
 
 p {
   font-size: 1.1em;
   line-height: 1.7em;
+  color: white;
+}
+
+label{
+  color: white;
 }
 
 
@@ -139,15 +153,6 @@ aside {
       margin-top: 0px;
     }
   }
-}
-
-.gravatar {
-  float: left;
-  margin-right: 10px;
-}
-
-.gravatar_edit {
-  margin-top: 15px;
 }
 
 /* forms */

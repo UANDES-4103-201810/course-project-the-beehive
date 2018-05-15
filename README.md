@@ -1,7 +1,7 @@
 # The Beehive
 A Web application for the course "Web Technologies", Universidad de los Andes.
-## Integrants:
-Ignacio Parragué
+## Members:
+Ignacio Parragué,
 Gustavo Vicuña
 ## Getting started
 
