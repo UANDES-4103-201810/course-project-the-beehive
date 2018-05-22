@@ -8,6 +8,15 @@
       <h2>
         <%= @user.description %>
       </h2>
+
+      <% if logged_in? %>
+        <% if @current_user.id == @user.id %>
+        # Links for this user
+        <% end %>
+      <% else %>
+        # Links for non-logged-in-users
+      <% end %>
+
     </section>
   </aside>
 </div>
