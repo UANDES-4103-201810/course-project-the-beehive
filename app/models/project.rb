@@ -7,5 +7,4 @@ class Project < ApplicationRecord
   validates :name, presence: true, length: { maximum: 100 }
   validates :description, presence: true, length: { maximum: 300, minimum: 10 }
   validates :user, :goal, presence: true
-  validates :date_limit, presence: true, date: { after: Time.now }
 end
