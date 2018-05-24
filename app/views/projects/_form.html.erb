@@ -1,4 +1,4 @@
-<%= form_with(model: project, controller: create) do |form| %>
+<%= form_with(model: project, local: true) do |form| %>
   <% if project.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(project.errors.count, "error") %> prohibited this project from being saved:</h2>
@@ -11,42 +11,21 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
     <%= form.label :name %>
     <%= form.text_field :name %>
-  </div>
 
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
-  </div>
-
-  <div class="field">
     <%= form.label :description %>
     <%= form.text_field :description %>
-  </div>
 
-  <div class="field">
     <%= form.label :goal %>
     <%= form.number_field :goal %>
-  </div>
 
-  <div class="field">
-    <%= form.label :actual %>
-    <%= form.number_field :actual %>
-  </div>
-
-  <div class="field">
     <%= form.label :date_limit %>
     <%= form.date_select :date_limit %>
-  </div>
+    </div>
 
-  <div class="field">
-    <%= form.label :funders %>
-    <%= form.number_field :funders %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Update", class: 'btn btn-primary' %>
   </div>
 <% end %>

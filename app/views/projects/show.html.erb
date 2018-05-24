@@ -34,6 +34,37 @@
   <strong>Funders:</strong>
   <%= @project.funders %>
 </p>
+<%= if logged_in? %>
+  <%= if @current_user.id == @user.id %>
+    <%= link_to 'Edit Project', edit_user_project_path(@project) %>
+    <%= link_to 'Create new promise for this project', new_user_project_promise_path %>
+  <%= else %>
+    <%= link_to 'Fund this Project!' %>
+  <% end %>
+<% end %>
 
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+<h2> Projects: </h2>
+<% @promises.each do |promise| %>
+  <h3>
+    <%= promise.description %>
+  </h3>
+  <h3>
+    <%= promise.min %>
+  </h3>
+  <h3>
+    <%= promise.delivery_date %>
+  </h3>
+  <h3>
+    <%= promise.buyers %>
+  </h3>
+  <%= if logged_in? %>
+    <%= if @current_user.id == @user.id %>
+      <%= link_to 'Edit Promise', edit_user_project__promise_path(@project) %>
+    <%= else %>
+      <%= link_to 'Buy this promise!' %>
+    <% end %>
+  <% end %>
+<% end %>
+</aside>
+
+<%= link_to 'Edit', edit_project_path(@project) %>

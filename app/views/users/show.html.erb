@@ -14,17 +14,17 @@
         <% if @current_user.id == @user.id %>
           <%= link_to 'Edit your account', edit_user_path(@user) %>
           <%= link_to 'Create a new project', new_user_project_path(@user) %>
+        <% else %>
+          <%= link_to 'Follow' %>
         <% end %>
-      <% else %>
-        <%= link_to 'Follow' %>
       <% end %>
 
     </section>
     <h2> Projects: </h2>
     <% @projects.each do |project| %>
-    <h3>
-      <%= project.name %>
-    </h3>
+      <h3>
+        <%= project.name %>
+      </h3>
       <h4>
         <%= project.description %>
       </h4>

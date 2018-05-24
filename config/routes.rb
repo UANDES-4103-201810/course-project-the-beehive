@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   get 'sessions/new'
   get '/home', to: 'pages#home'
@@ -10,17 +12,15 @@ Rails.application.routes.draw do
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
 
-  get '/users/:id/projects/new', to: 'projects#new'
-
-  resources :users do
-    resources :projects do
-      resources :promises
+  shallow do
+    resources :users do
+      resources :projects do
+        resources :promises
+      end
     end
   end
 
-
   root 'pages#home'
-
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
