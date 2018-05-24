@@ -7,11 +7,11 @@ Rails.application.routes.draw do
   get '/register', to: 'users#new'
   post '/register', to: 'users#create'
   get '/users/:id/settings', to: 'users#edit'
+  get 'projects/:id/fund', to: 'projects#fund'
 
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
-
   shallow do
     resources :users do
       resources :projects do
