@@ -12,15 +12,22 @@
 
       <% if logged_in? %>
         <% if @current_user.id == @user.id %>
-          <%= link_to 'Edit', edit_user_path(@user) %>
+          <%= link_to 'Edit your account', edit_user_path(@user) %>
+          <%= link_to 'Create a new project', new_user_project_path(@user) %>
         <% end %>
       <% else %>
-        # Links for non-logged-in-users
+        <%= link_to 'Follow' %>
       <% end %>
 
     </section>
+    <h2> Projects: </h2>
     <% @projects.each do |project| %>
-    
+    <h3>
+      <%= project.name %>
+    </h3>
+      <h4>
+        <%= project.description %>
+      </h4>
     <% end %>
   </aside>
 </div>

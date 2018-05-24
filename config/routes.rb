@@ -5,13 +5,19 @@ Rails.application.routes.draw do
   get '/register', to: 'users#new'
   post '/register', to: 'users#create'
   get '/users/:id/settings', to: 'users#edit'
+
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
-  resources :users
-  resources :projects do
-    resources :promises
+
+  get '/users/:id/projects/new', to: 'projects#new'
+
+  resources :users do
+    resources :projects do
+      resources :promises
+    end
   end
+
 
   root 'pages#home'
 
