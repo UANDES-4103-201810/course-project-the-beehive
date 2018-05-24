@@ -9,15 +9,19 @@
         <%= @user.description %>
       </h2>
 
+
       <% if logged_in? %>
         <% if @current_user.id == @user.id %>
-        # Links for this user
+          <%= link_to 'Edit', edit_user_path(@user) %>
         <% end %>
       <% else %>
         # Links for non-logged-in-users
       <% end %>
 
     </section>
+    <% @projects.each do |project| %>
+    
+    <% end %>
   </aside>
 </div>
 <%= link_to 'Back', home_path %>

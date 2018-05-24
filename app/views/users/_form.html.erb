@@ -10,28 +10,24 @@
       </ul>
     </div>
   <% end %>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <%= form.label :name %>
+      <%= form.text_field :name, class: 'form-control' %>
 
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
-  </div>
+      <%= form.label :email %>
+      <%= form.email_field :email, class: 'form-control' %>
 
-  <div class="field">
-    <%= form.label :password %>
-    <%= form.text_field :password %>
-  </div>
+      <%= form.label :password %>
+      <%= form.password_field :password, class: 'form-control' %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
+      <%= form.label :password_confirmation, "Confirmation" %>
+      <%= form.password_field :password_confirmation, class: 'form-control' %>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_field :description %>
-  </div>
+      <%= form.label :description %>
+      <%= form.text_field :description, class: 'form-control' %>
+    </div>
 
-  <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Update", class: 'btn btn-primary' %>
   </div>
 <% end %>
