@@ -43735,3 +43735,597 @@ DEPRECATION WARNING: Dangerous query method (method whose arguments are used as 
 Completed 200 OK in 107ms (Views: 105.5ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-05-25 17:27:37 -0400
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/web/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from _app_views_pages_home_html_erb___2682088950711669859_37791320 at /home/web/Desktop/beehive2/course-project-the-beehive/app/views/pages/home.html.erb:15)
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/pages/home.html.erb:16
+  Rendered pages/home.html.erb within layouts/application (73.9ms)
+  Rendered layouts/_rails_default.html.erb (405.3ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_sidenav.html.erb (7.6ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 542ms (Views: 529.3ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2018-05-25 17:27:40 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered projects/index.html.erb within layouts/application (9.7ms)
+  Rendered layouts/_rails_default.html.erb (95.7ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_sidenav.html.erb (4.0ms)
+  Rendered layouts/_footer.html.erb (1.4ms)
+Completed 200 OK in 122ms (Views: 120.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2018-05-25 17:28:29 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered projects/index.html.erb within layouts/application (6.0ms)
+  Rendered layouts/_rails_default.html.erb (114.5ms)
+  Rendered layouts/_header.html.erb (4.1ms)
+  Rendered layouts/_sidenav.html.erb (6.8ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 150ms (Views: 147.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects/1" for 127.0.0.1 at 2018-05-25 17:28:31 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:91
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:15
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:16
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered projects/show.html.erb within layouts/application (19.3ms)
+Completed 500 Internal Server Error in 75ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `type' for #<User:0x007fe270036178>):
+    30: </p>
+    31: 
+    32: <% if logged_in? %>
+    33:   <% if @current_user.id == @user.id || @current_user.type == 'admin' %>
+    34:     <%= link_to 'Edit Project' %>
+    35:     <%= link_to 'Add a new promise', new_project_promise_path(@user, @project) %>
+    36:   <% else %>
+  
+app/views/projects/show.html.erb:33:in `_app_views_projects_show_html_erb___2522810429066973254_70305259368380'
+Started GET "/projects" for 127.0.0.1 at 2018-05-25 17:28:40 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered projects/index.html.erb within layouts/application (7.8ms)
+  Rendered layouts/_rails_default.html.erb (111.7ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_sidenav.html.erb (3.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 136ms (Views: 134.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/1" for 127.0.0.1 at 2018-05-25 17:28:59 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:91
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:15
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:16
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mPromise Load (5.6ms)[0m  [1m[34mSELECT "promises".* FROM "promises" WHERE "promises"."project_id" = ?[0m  [["project_id", 1]]
+  ↳ app/views/projects/show.html.erb:46
+  Rendered projects/show.html.erb within layouts/application (34.5ms)
+  Rendered layouts/_rails_default.html.erb (103.0ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_sidenav.html.erb (4.2ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 163ms (Views: 153.6ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/projects/1" for 127.0.0.1 at 2018-05-25 17:29:08 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:91
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:15
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:16
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mPromise Load (0.2ms)[0m  [1m[34mSELECT "promises".* FROM "promises" WHERE "promises"."project_id" = ?[0m  [["project_id", 1]]
+  ↳ app/views/projects/show.html.erb:46
+  Rendered projects/show.html.erb within layouts/application (6.6ms)
+  Rendered layouts/_rails_default.html.erb (114.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_sidenav.html.erb (3.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 144ms (Views: 136.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects/1" for 127.0.0.1 at 2018-05-25 17:30:06 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:91
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:15
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:16
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (8.0ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/web/Desktop/beehive2/course-project-the-beehive/app/views/projects/show.html.erb:76: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^
+/home/web/Desktop/beehive2/course-project-the-beehive/app/views/projects/show.html.erb:78: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/projects/show.html.erb:76: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/projects/show.html.erb:78: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/projects/1" for 127.0.0.1 at 2018-05-25 17:31:00 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:91
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:15
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:16
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mPromise Load (0.3ms)[0m  [1m[34mSELECT "promises".* FROM "promises" WHERE "promises"."project_id" = ?[0m  [["project_id", 1]]
+  ↳ app/views/projects/show.html.erb:48
+  Rendered projects/show.html.erb within layouts/application (11.3ms)
+  Rendered layouts/_rails_default.html.erb (115.3ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_sidenav.html.erb (3.9ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 156ms (Views: 142.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/projects/1" for 127.0.0.1 at 2018-05-25 17:31:29 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:91
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:15
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:16
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mPromise Load (0.3ms)[0m  [1m[34mSELECT "promises".* FROM "promises" WHERE "promises"."project_id" = ?[0m  [["project_id", 1]]
+  ↳ app/views/projects/show.html.erb:48
+  Rendered projects/show.html.erb within layouts/application (6.8ms)
+  Rendered layouts/_rails_default.html.erb (99.4ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_sidenav.html.erb (3.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 137ms (Views: 126.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-25 17:31:44 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from _app_views_pages_home_html_erb___2682088950711669859_70305405495140 at /home/web/Desktop/beehive2/course-project-the-beehive/app/views/pages/home.html.erb:15)
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/pages/home.html.erb:16
+  Rendered pages/home.html.erb within layouts/application (9.1ms)
+  Rendered layouts/_rails_default.html.erb (115.7ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_sidenav.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 143ms (Views: 141.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2018-05-25 17:31:49 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered projects/index.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_rails_default.html.erb (101.4ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_sidenav.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 126ms (Views: 123.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-05-25 17:32:13 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from _app_views_pages_home_html_erb___2682088950711669859_70305408725440 at /home/web/Desktop/beehive2/course-project-the-beehive/app/views/pages/home.html.erb:15)
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/pages/home.html.erb:16
+  Rendered pages/home.html.erb within layouts/application (8.6ms)
+  Rendered layouts/_rails_default.html.erb (116.5ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_sidenav.html.erb (4.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 144ms (Views: 142.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-05-25 17:32:18 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from _app_views_pages_home_html_erb___2682088950711669859_70305259830860 at /home/web/Desktop/beehive2/course-project-the-beehive/app/views/pages/home.html.erb:15)
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/pages/home.html.erb:16
+  Rendered pages/home.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_rails_default.html.erb (95.3ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_sidenav.html.erb (2.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 117ms (Views: 114.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2018-05-25 17:32:22 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:9
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered projects/index.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_rails_default.html.erb (105.3ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_sidenav.html.erb (4.9ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 132ms (Views: 130.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects/1" for 127.0.0.1 at 2018-05-25 17:34:45 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:91
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:15
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:16
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mPromise Load (0.2ms)[0m  [1m[34mSELECT "promises".* FROM "promises" WHERE "promises"."project_id" = ?[0m  [["project_id", 1]]
+  ↳ app/views/projects/show.html.erb:48
+  Rendered projects/show.html.erb within layouts/application (9.5ms)
+  Rendered layouts/_rails_default.html.erb (108.1ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_sidenav.html.erb (3.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 156ms (Views: 149.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/projects/1/edit" for 127.0.0.1 at 2018-05-25 17:34:47 -0400
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:91
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form default.html.erb (39.0ms)
+  Rendered projects/edit.html.erb within layouts/application (47.5ms)
+  Rendered layouts/_rails_default.html.erb (108.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_sidenav.html.erb (3.9ms)
+  Rendered layouts/_footer.html.erb (1.7ms)
+Completed 200 OK in 178ms (Views: 173.9ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/projects/1" for 127.0.0.1 at 2018-05-25 17:34:49 -0400
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Cmw4Iyw1uGNyFUIfACP/2p/oVar2Q8xRiRRXF6vuv8WxxRtFIvUnJaONsqHUNqDeZXw/sMhiFTLKUx2HFDdC1w==", "project"=>{"name"=>"Nuevo proyecto", "description"=>"Esta es la descripcion de un nuevo proyecto", "goal"=>"15", "date_limit(1i)"=>"2018", "date_limit(2i)"=>"8", "date_limit(3i)"=>"31"}, "commit"=>"Update", "id"=>"1"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:91
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/projects_controller.rb:48
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:48
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/projects_controller.rb:48
+Redirected to http://localhost:3000/projects/1
+Completed 302 Found in 27ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/1" for 127.0.0.1 at 2018-05-25 17:34:49 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:91
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:15
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:16
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mPromise Load (0.3ms)[0m  [1m[34mSELECT "promises".* FROM "promises" WHERE "promises"."project_id" = ?[0m  [["project_id", 1]]
+  ↳ app/views/projects/show.html.erb:48
+  Rendered projects/show.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_rails_default.html.erb (81.3ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_sidenav.html.erb (3.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 105ms (Views: 101.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects/1/edit" for 127.0.0.1 at 2018-05-25 17:34:52 -0400
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:91
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form default.html.erb (4.8ms)
+  Rendered projects/edit.html.erb within layouts/application (6.5ms)
+  Rendered layouts/_rails_default.html.erb (86.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered layouts/_header.html.erb (3.4ms)
+  Rendered layouts/_sidenav.html.erb (13.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 127ms (Views: 124.8ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/projects/1" for 127.0.0.1 at 2018-05-25 17:34:54 -0400
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"otCMJ0lO+g0/MR+IOQZZpOYd3G9qvRx9umJknT0RD08Zea9BR45lS+6p7zbtEwagHIm2dVScxR75JS4NgsjyXQ==", "project"=>{"name"=>"Nuevo proyecto", "description"=>"Esta es la descripcion de un nuevo proyecto", "goal"=>"15", "date_limit(1i)"=>"2018", "date_limit(2i)"=>"8", "date_limit(3i)"=>"31"}, "commit"=>"Update", "id"=>"1"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:91
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/projects_controller.rb:48
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:48
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/projects_controller.rb:48
+Redirected to http://localhost:3000/projects/1
+Completed 302 Found in 13ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/projects/1" for 127.0.0.1 at 2018-05-25 17:34:54 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:91
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:15
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:16
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mPromise Load (0.2ms)[0m  [1m[34mSELECT "promises".* FROM "promises" WHERE "promises"."project_id" = ?[0m  [["project_id", 1]]
+  ↳ app/views/projects/show.html.erb:48
+  Rendered projects/show.html.erb within layouts/application (6.0ms)
+  Rendered layouts/_rails_default.html.erb (95.0ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_sidenav.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 124ms (Views: 118.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-25 17:35:09 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from _app_views_pages_home_html_erb___2682088950711669859_70305411667500 at /home/web/Desktop/beehive2/course-project-the-beehive/app/views/pages/home.html.erb:15)
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/pages/home.html.erb:16
+  Rendered pages/home.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_rails_default.html.erb (92.2ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_sidenav.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 114ms (Views: 112.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2018-05-25 17:35:11 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered projects/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_rails_default.html.erb (93.8ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_sidenav.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 115ms (Views: 113.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2018-05-25 17:35:29 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:9
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered projects/index.html.erb within layouts/application (16.2ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"projects", :id=>nil}, missing required keys: [:id]):
+    12:         <%= project.description %>
+    13:         <% if logged_in? %>
+    14:           <% if @current_user.user_type == 'admin' %>
+    15:             <%= link_to 'Edit Project', edit_project_path(@project) %>
+    16:           <% end %>
+    17: 
+    18:         <% end %>
+  
+app/views/projects/index.html.erb:15:in `block in _app_views_projects_index_html_erb__274108250569912321_70305412297500'
+app/views/projects/index.html.erb:9:in `_app_views_projects_index_html_erb__274108250569912321_70305412297500'
+Started GET "/projects" for 127.0.0.1 at 2018-05-25 17:35:49 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered projects/index.html.erb within layouts/application (12.1ms)
+  Rendered layouts/_rails_default.html.erb (110.5ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_sidenav.html.erb (3.7ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 143ms (Views: 136.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2018-05-25 17:35:51 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered projects/index.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_rails_default.html.erb (73.0ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_sidenav.html.erb (2.9ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 98ms (Views: 96.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2018-05-25 17:36:06 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered projects/index.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_rails_default.html.erb (127.4ms)
+  Rendered layouts/_header.html.erb (3.5ms)
+  Rendered layouts/_sidenav.html.erb (6.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 157ms (Views: 152.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/projects/1/edit" for 127.0.0.1 at 2018-05-25 17:36:08 -0400
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:91
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form default.html.erb (5.8ms)
+  Rendered projects/edit.html.erb within layouts/application (7.7ms)
+  Rendered layouts/_rails_default.html.erb (74.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered layouts/_header.html.erb (4.4ms)
+  Rendered layouts/_sidenav.html.erb (2.8ms)
+  Rendered layouts/_footer.html.erb (1.4ms)
+Completed 200 OK in 104ms (Views: 101.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/1/edit" for 127.0.0.1 at 2018-05-25 17:36:19 -0400
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:91
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form default.html.erb (12.6ms)
+  Rendered projects/edit.html.erb within layouts/application (14.8ms)
+  Rendered layouts/_rails_default.html.erb (94.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_sidenav.html.erb (3.8ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 130ms (Views: 127.1ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/projects/1" for 127.0.0.1 at 2018-05-25 17:36:20 -0400
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KDLJmIAonCU3E0scL/b0/w/zXerzoNeu5qrSeg1rxGSTm+r+jugDY+aLu6L746v79Wc38M2BDs2l7ZjqsrI5dg==", "project"=>{"name"=>"Nuevo proyecto", "description"=>"Esta es la descripcion de un nuevo proyecto", "goal"=>"15", "date_limit(1i)"=>"2018", "date_limit(2i)"=>"8", "date_limit(3i)"=>"31"}, "commit"=>"Update", "id"=>"1"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:91
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/projects_controller.rb:48
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:48
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/projects_controller.rb:48
+Redirected to http://localhost:3000/projects/1
+Completed 302 Found in 10ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/projects/1" for 127.0.0.1 at 2018-05-25 17:36:20 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:91
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:15
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:16
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mPromise Load (0.2ms)[0m  [1m[34mSELECT "promises".* FROM "promises" WHERE "promises"."project_id" = ?[0m  [["project_id", 1]]
+  ↳ app/views/projects/show.html.erb:48
+  Rendered projects/show.html.erb within layouts/application (9.0ms)
+  Rendered layouts/_rails_default.html.erb (82.2ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_sidenav.html.erb (5.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 115ms (Views: 109.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-25 17:36:25 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from _app_views_pages_home_html_erb___2682088950711669859_70305406397420 at /home/web/Desktop/beehive2/course-project-the-beehive/app/views/pages/home.html.erb:15)
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/pages/home.html.erb:16
+  Rendered pages/home.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_rails_default.html.erb (103.9ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_sidenav.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 130ms (Views: 127.3ms | ActiveRecord: 0.5ms)
+
+

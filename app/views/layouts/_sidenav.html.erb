@@ -24,7 +24,9 @@
   <%else %>
     <% if @current_user.user_type == 'admin' %>
       <p>Admin options</p>
-      <%= link_to 'New Project' %>
+      <%= link_to 'All Users'%>
+      <%= link_to 'All Projects' , projects_path%>
+      <%= link_to 'All Categories' %>
     <% end %>
     <p>Projects</p>
     <%= link_to 'New Project', new_user_project_path(@current_user) %>

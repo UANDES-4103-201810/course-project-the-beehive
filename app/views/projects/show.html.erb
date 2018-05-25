@@ -30,8 +30,10 @@
 </p>
 
 <% if logged_in? %>
-  <% if @current_user.id == @user.id %>
-    <%= link_to 'Edit Project' %>
+  <% if @current_user.id == @user.id || @current_user.user_type == 'admin' %>
+    <%= link_to 'Edit Project' , edit_project_path(@project) %>
+  <%end %>
+  <%if @current_user.id == @user.id %>
     <%= link_to 'Add a new promise', new_project_promise_path(@user, @project) %>
   <% else %>
     <%= link_to 'Follow the poject', controller: 'projects', action: 'new_fund' %>
