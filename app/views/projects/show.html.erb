@@ -34,7 +34,7 @@
     <%= link_to 'Edit Project' %>
     <%= link_to 'Add a new promise', new_project_promise_path(@user, @project) %>
   <% else %>
-    <%= link_to 'Fund this Project!'%>
+    <%= link_to 'Fund this Project!', new_project_fund_path(@user, @project) %>
   <% end %>
 <% end %>
 
@@ -61,6 +61,7 @@
     <% if logged_in? %>
       <% if @current_user.id == @user.id %>
         <%= link_to 'Edit Promise', edit_promise_path %>
+        <%= link_to 'Delete' %>
       <% else %>
         <%= link_to 'Buy this promise!' %>
       <% end %>
