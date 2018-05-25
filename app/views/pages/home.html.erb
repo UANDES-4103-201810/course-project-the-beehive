@@ -9,3 +9,14 @@
     <%= link_to 'Register now!', register_path, class: "btn btn-lg btn-primary" %>
   <% end %>
 </div>
+
+<div>
+  <p class='home'> Hosted Projects </a>
+    <% @projects = Project.limit(5).order("RANDOM()") %>
+    <% @projects.each do |project| %>
+    <h2>
+      <%= link_to project.name , project_path(project) %>:
+      <%= project.description %>
+    </h2>
+  <% end %>
+</div>
