@@ -14,6 +14,7 @@ class PromisesController < ApplicationController
 
   # GET /promises/new
   def new
+    @project ||= Project.find_by(id: params[:project_id])
     @promise = Promise.new
   end
 

@@ -39,7 +39,7 @@
 <% if logged_in? %>
   <% if @current_user.id == @user.id %>
     <%= link_to 'Edit Project' %>
-    <%= link_to 'Create new promise for this project' %>
+    <%= link_to 'Create new promise for this project', new_project_promise_path(@user, @project) %>
   <% else %>
     <%= link_to 'Fund this Project!' %>
   <% end %>
