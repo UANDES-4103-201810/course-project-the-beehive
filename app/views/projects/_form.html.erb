@@ -1,31 +1,29 @@
-<%= form_with(model: project, local: true) do |form| %>
-  <% if project.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(project.errors.count, "error") %> prohibited this project from being saved:</h2>
+<% provide(:title, "New Project") %>
+<h1>Log in</h1>
 
-      <ul>
-      <% project.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <% if logged_in? %>
+      <%= form_for(:project, url: new_user_project_path(@current_user)) do |form| %>
+
+        <%= form.label :name %>
+        <%= form.text_field :name %>
+
+        <%= form.label :description %>
+        <%= form.text_field :description %>
+
+        <%= form.label :goal %>
+        <%= form.number_field :goal %>
+
+        <%= form.label :date_limit %>
+        <%= form.date_select :date_limit %>
+
+        <%= form.hidden_field :funders, value: 0 %>
+        <%= form.hidden_field :actual, value: 0 %>
+        <%= form.hidden_field :user_id, value: @current_user.id %>
+
+        <%= form.submit "Create", class: "btn btn-primary" %>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="row">
-    <div class="col-md-6 col-md-offset-3">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-
-    <%= form.label :description %>
-    <%= form.text_field :description %>
-
-    <%= form.label :goal %>
-    <%= form.number_field :goal %>
-
-    <%= form.label :date_limit %>
-    <%= form.date_select :date_limit %>
-    </div>
-
-    <%= form.submit "Update", class: 'btn btn-primary' %>
+    <% end %>
   </div>
-<% end %>
+</div>
