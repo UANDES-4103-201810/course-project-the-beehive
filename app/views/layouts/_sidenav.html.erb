@@ -23,12 +23,13 @@
     <a  class="nonono">Favourite Projects</a>
   <%else %>
     <p>Projects</p>
-    <%= link_to 'New Project' %>
-    <%= link_to 'My Projects' %>
+    <%= link_to 'New Project', new_user_project_path(@current_user) %>
+    <%= link_to 'My Projects', @current_user %>
+    <%= link_to 'All Projects' , projects_path %>
     <%= link_to 'Projects Funded' %>
     <%= link_to 'Favourite Projects' %>
   <%end %>
 </div>
 
 <!-- Use any element to open the sidenav -->
-<span onclick="openNav()"><img src="Arrow.png" alt="open_sidebar"></span>
+<span onclick="openNav()"><%= image_tag("Arrow.png", :alt => "open_sidebar", :size => "100x100") %></span>

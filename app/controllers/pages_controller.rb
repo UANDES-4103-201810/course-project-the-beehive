@@ -6,4 +6,5 @@ class PagesController < ApplicationController
   def register; end
 
   def about; end
+
 end
