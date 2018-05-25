@@ -10,7 +10,7 @@ class ProjectsController < ApplicationController
   # GET /projects/1
   # GET /projects/1.json
   def show
-  #  @user = User.find(params[:user_id])
+    #@user = User.find(params[:user_id])
     @project = Project.find(params[:id])
     #@promises = @project.promises
   end

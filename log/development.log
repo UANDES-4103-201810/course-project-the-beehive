@@ -30302,3 +30302,1252 @@ Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
 ActiveRecord::RecordNotFound (Couldn't find User with 'id'=Arrow):
   
 app/controllers/users_controller.rb:71:in `set_user'
+Started GET "/users/1/projects/new" for 127.0.0.1 at 2018-05-24 20:57:38 -0400
+Started GET "/users/Arrow.png" for 127.0.0.1 at 2018-05-24 20:57:38 -0400
+Started GET "/users/1/projects/Arrow.png" for 127.0.0.1 at 2018-05-24 20:57:38 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/web/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  ↳ /home/web/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  ↳ /home/web/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/projects/Arrow.png"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Processing by ProjectsController#new as HTML
+  Parameters: {"user_id"=>"1"}
+Processing by UsersController#show as PNG
+  Parameters: {"id"=>"Arrow"}
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:71
+Completed 404 Not Found in 19ms (ActiveRecord: 1.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=Arrow):
+  
+app/controllers/users_controller.rb:71:in `set_user'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered projects/_form.html.erb (77.6ms)
+  Rendered projects/new.html.erb within layouts/application (104.4ms)
+  Rendered layouts/_rails_default.html.erb (610.0ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_sidenav.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 749ms (Views: 726.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/1/projects/Arrow.png" for 127.0.0.1 at 2018-05-24 20:57:39 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/projects/Arrow.png"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/users/1/projects/new" for 127.0.0.1 at 2018-05-24 20:57:44 -0400
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QN6PFtN/fWfM4Sr1MwMsPaJkZFfezATXogAiQFHlIJ/V92VgxCADOptmjZWIHTBEX4c2lg/awkDgw9eSfcRQVQ==", "project"=>{"name"=>"s", "description"=>"ewqqweweqeqw", "goal"=>"11", "date_limit(1i)"=>"2018", "date_limit(2i)"=>"5", "date_limit(3i)"=>"25", "funders"=>"0", "actual"=>"0", "user_id"=>"1"}, "commit"=>"Create", "id"=>"1"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/projects_controller.rb:33
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:33
+  [1m[36mProject Create (1.6ms)[0m  [1m[32mINSERT INTO "projects" ("name", "user_id", "description", "goal", "actual", "date_limit", "funders", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "s"], ["user_id", 1], ["description", "ewqqweweqeqw"], ["goal", 11], ["actual", 0], ["date_limit", "2018-05-25"], ["funders", 0], ["created_at", "2018-05-25 00:57:44.507126"], ["updated_at", "2018-05-25 00:57:44.507126"]]
+  ↳ app/controllers/projects_controller.rb:33
+  [1m[35m (11.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/projects_controller.rb:33
+Redirected to http://localhost:3000/projects/3
+Completed 302 Found in 43ms (ActiveRecord: 13.5ms)
+
+
+Started GET "/projects/3" for 127.0.0.1 at 2018-05-24 20:57:44 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:73
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:14
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/home/web/Desktop/beehive2/course-project-the-beehive/app/views/projects/show.html.erb:37: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+uffer.append=( if logged_in? );@output_buffer.safe_append='
+                              ^
+/home/web/Desktop/beehive2/course-project-the-beehive/app/views/projects/show.html.erb:38: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+@current_user.id == @user.id );@output_buffer.safe_append='
+                              ^
+/home/web/Desktop/beehive2/course-project-the-beehive/app/views/projects/show.html.erb:41: syntax error, unexpected keyword_else
+e;@output_buffer.append=( else );@output_buffer.safe_append=
+                              ^
+/home/web/Desktop/beehive2/course-project-the-beehive/app/views/projects/show.html.erb:42: syntax error, unexpected ')'
+ink_to 'Fund this Project!', );@output_buffer.safe_append='
+                              ^
+/home/web/Desktop/beehive2/course-project-the-beehive/app/views/projects/show.html.erb:43: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;   end 
+               ^
+/home/web/Desktop/beehive2/course-project-the-beehive/app/views/projects/show.html.erb:47: syntax error, unexpected keyword_do_block, expecting ')'
+'.freeze; @promises.each do |promise| 
+                           ^
+/home/web/Desktop/beehive2/course-project-the-beehive/app/views/projects/show.html.erb:60: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+uffer.append=( if logged_in? );@output_buffer.safe_append='
+                              ^
+/home/web/Desktop/beehive2/course-project-the-beehive/app/views/projects/show.html.erb:61: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+@current_user.id == @user.id );@output_buffer.safe_append='
+                              ^
+/home/web/Desktop/beehive2/course-project-the-beehive/app/views/projects/show.html.erb:63: syntax error, unexpected keyword_else
+e;@output_buffer.append=( else );@output_buffer.safe_append=
+                              ^
+/home/web/Desktop/beehive2/course-project-the-beehive/app/views/projects/show.html.erb:65: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;     end 
+                 ^
+/home/web/Desktop/beehive2/course-project-the-beehive/app/views/projects/show.html.erb:73: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/web/Desktop/beehive2/course-project-the-beehive/app/views/projects/show.html.erb:75: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/projects/show.html.erb:37: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+app/views/projects/show.html.erb:38: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+app/views/projects/show.html.erb:41: syntax error, unexpected keyword_else
+app/views/projects/show.html.erb:42: syntax error, unexpected ')'
+app/views/projects/show.html.erb:43: syntax error, unexpected keyword_end, expecting ')'
+app/views/projects/show.html.erb:47: syntax error, unexpected keyword_do_block, expecting ')'
+app/views/projects/show.html.erb:60: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+app/views/projects/show.html.erb:61: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+app/views/projects/show.html.erb:63: syntax error, unexpected keyword_else
+app/views/projects/show.html.erb:65: syntax error, unexpected keyword_end, expecting ')'
+app/views/projects/show.html.erb:73: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/projects/show.html.erb:75: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/projects/3" for 127.0.0.1 at 2018-05-24 20:58:21 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:73
+Completed 404 Not Found in 39ms (ActiveRecord: 1.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  
+app/controllers/projects_controller.rb:13:in `show'
+Started GET "/users/1/projects/new" for 127.0.0.1 at 2018-05-24 20:59:41 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/web/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by ProjectsController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered projects/_form.html.erb (60.4ms)
+  Rendered projects/new.html.erb within layouts/application (63.7ms)
+  Rendered layouts/_rails_default.html.erb (324.8ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_sidenav.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 441ms (Views: 397.8ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/users/1/projects/Arrow.png" for 127.0.0.1 at 2018-05-24 20:59:41 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/projects/Arrow.png"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/users/1/projects/new" for 127.0.0.1 at 2018-05-24 20:59:45 -0400
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cXntG4HDkPbqTlMCEQUiPTOUqc+j7p64oGCrwctYgp+RwXQHDSo3fza8DDbiUTIVyIXaSshtQgXJ0DjaC7dtYg==", "project"=>{"name"=>"asd", "description"=>"qwe", "goal"=>"11", "date_limit(1i)"=>"2018", "date_limit(2i)"=>"5", "date_limit(3i)"=>"25", "funders"=>"0", "actual"=>"0", "user_id"=>"1"}, "commit"=>"Create", "id"=>"1"}
+  [1m[35m (1.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/projects_controller.rb:33
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:33
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/projects_controller.rb:33
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered projects/_form.html.erb (15.8ms)
+  Rendered projects/new.html.erb within layouts/application (21.1ms)
+  Rendered layouts/_rails_default.html.erb (83.6ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_sidenav.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 140ms (Views: 122.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/1/projects/Arrow.png" for 127.0.0.1 at 2018-05-24 20:59:46 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/projects/Arrow.png"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/users/1/projects/new" for 127.0.0.1 at 2018-05-24 20:59:48 -0400
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ije6JhLA0i3e0sc2varpMXwQbSoqG3tzhHxhDM74Q3jCjyM6nil1pAIgmAJO/vkZhwEer0GYp87tzPIXDheshQ==", "project"=>{"name"=>"asd", "description"=>"qwexzxczzxczxc", "goal"=>"11", "date_limit(1i)"=>"2018", "date_limit(2i)"=>"5", "date_limit(3i)"=>"25", "funders"=>"0", "actual"=>"0", "user_id"=>"1"}, "commit"=>"Create", "id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/projects_controller.rb:33
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:33
+  [1m[36mProject Create (0.9ms)[0m  [1m[32mINSERT INTO "projects" ("name", "user_id", "description", "goal", "actual", "date_limit", "funders", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "asd"], ["user_id", 1], ["description", "qwexzxczzxczxc"], ["goal", 11], ["actual", 0], ["date_limit", "2018-05-25"], ["funders", 0], ["created_at", "2018-05-25 00:59:48.459195"], ["updated_at", "2018-05-25 00:59:48.459195"]]
+  ↳ app/controllers/projects_controller.rb:33
+  [1m[35m (6.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/projects_controller.rb:33
+Completed 500 Internal Server Error in 328ms (ActiveRecord: 7.5ms)
+
+
+  
+NameError (undefined local variable or method `user_project_path' for #<ProjectsController:0x000000047d4890>
+Did you mean?  user_projects_path
+               user_projects_url
+               edit_project_path):
+  
+app/controllers/projects_controller.rb:34:in `block (2 levels) in create'
+app/controllers/projects_controller.rb:32:in `create'
+Started GET "/users/1/projects/new" for 127.0.0.1 at 2018-05-24 21:00:07 -0400
+Processing by ProjectsController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered projects/_form.html.erb (23.4ms)
+  Rendered projects/new.html.erb within layouts/application (25.7ms)
+  Rendered layouts/_rails_default.html.erb (75.0ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_sidenav.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 148ms (Views: 112.6ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/users/1/projects/Arrow.png" for 127.0.0.1 at 2018-05-24 21:00:07 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/projects/Arrow.png"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/users/1/projects/new" for 127.0.0.1 at 2018-05-24 21:00:12 -0400
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/VC8zzpYuOrKz7Oj5xXq9TuyyX3vsvW9yvbShAFNBEUd6CXTtrEfYxY97JcUQfrdwKO6+IQxKQCjRkGfwaLruA==", "project"=>{"name"=>"qwewqe", "description"=>"qwexzxczzxczxc", "goal"=>"11111", "date_limit(1i)"=>"2018", "date_limit(2i)"=>"5", "date_limit(3i)"=>"25", "funders"=>"0", "actual"=>"0", "user_id"=>"1"}, "commit"=>"Create", "id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/projects_controller.rb:33
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:33
+  [1m[36mProject Create (1.1ms)[0m  [1m[32mINSERT INTO "projects" ("name", "user_id", "description", "goal", "actual", "date_limit", "funders", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "qwewqe"], ["user_id", 1], ["description", "qwexzxczzxczxc"], ["goal", 11111], ["actual", 0], ["date_limit", "2018-05-25"], ["funders", 0], ["created_at", "2018-05-25 01:00:12.349105"], ["updated_at", "2018-05-25 01:00:12.349105"]]
+  ↳ app/controllers/projects_controller.rb:33
+  [1m[35m (5.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/projects_controller.rb:33
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 6.7ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"index", :controller=>"projects", :id=>"1"}, missing required keys: [:user_id]):
+  
+app/controllers/projects_controller.rb:34:in `block (2 levels) in create'
+app/controllers/projects_controller.rb:32:in `create'
+Started GET "/users/1/projects/new" for 127.0.0.1 at 2018-05-24 21:00:39 -0400
+Processing by ProjectsController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered projects/_form.html.erb (40.4ms)
+  Rendered projects/new.html.erb within layouts/application (47.6ms)
+  Rendered layouts/_rails_default.html.erb (67.3ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_sidenav.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 145ms (Views: 126.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/users/1/projects/Arrow.png" for 127.0.0.1 at 2018-05-24 21:00:39 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/projects/Arrow.png"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/users/1/projects/new" for 127.0.0.1 at 2018-05-24 21:00:44 -0400
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TXzWJ6zOfsdRejMp3MduN2ei+rD65dXNdS6mX6SU+kOtxE87ICfZTo2IbB0vk34fnLOJNZFmCXAcnjVEZHsVvg==", "project"=>{"name"=>"zcx", "description"=>"qrrqrrwqqwr", "goal"=>"1111", "date_limit(1i)"=>"2018", "date_limit(2i)"=>"5", "date_limit(3i)"=>"25", "funders"=>"0", "actual"=>"0", "user_id"=>"1"}, "commit"=>"Create", "id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/projects_controller.rb:33
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:33
+  [1m[36mProject Create (0.8ms)[0m  [1m[32mINSERT INTO "projects" ("name", "user_id", "description", "goal", "actual", "date_limit", "funders", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "zcx"], ["user_id", 1], ["description", "qrrqrrwqqwr"], ["goal", 1111], ["actual", 0], ["date_limit", "2018-05-25"], ["funders", 0], ["created_at", "2018-05-25 01:00:44.279064"], ["updated_at", "2018-05-25 01:00:44.279064"]]
+  ↳ app/controllers/projects_controller.rb:33
+  [1m[35m (15.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/projects_controller.rb:33
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 16.9ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"index", :controller=>"projects", :user_id=>nil}, missing required keys: [:user_id]):
+  
+app/controllers/projects_controller.rb:34:in `block (2 levels) in create'
+app/controllers/projects_controller.rb:32:in `create'
+Started GET "/users/1/projects/new" for 127.0.0.1 at 2018-05-24 21:01:43 -0400
+Processing by ProjectsController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered projects/_form.html.erb (9.4ms)
+  Rendered projects/new.html.erb within layouts/application (11.8ms)
+  Rendered layouts/_rails_default.html.erb (94.1ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_sidenav.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 119ms (Views: 116.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/projects/Arrow.png" for 127.0.0.1 at 2018-05-24 21:01:43 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/projects/Arrow.png"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/users/1/projects/new" for 127.0.0.1 at 2018-05-24 21:01:47 -0400
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"z1BiDbP1xoXsHxFkGbV2PW5uMxdeTo3X3zxVqtlwBecv6PsRPxxhDDDtTlDq4WYVlX9AkjXNUWq2jMaxGZ/qGg==", "project"=>{"name"=>"aasdzxcxzc", "description"=>"dsfagageagare", "goal"=>"11111", "date_limit(1i)"=>"2018", "date_limit(2i)"=>"5", "date_limit(3i)"=>"25", "funders"=>"0", "actual"=>"0", "user_id"=>"1"}, "commit"=>"Create", "id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/projects_controller.rb:33
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:33
+  [1m[36mProject Create (0.7ms)[0m  [1m[32mINSERT INTO "projects" ("name", "user_id", "description", "goal", "actual", "date_limit", "funders", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "aasdzxcxzc"], ["user_id", 1], ["description", "dsfagageagare"], ["goal", 11111], ["actual", 0], ["date_limit", "2018-05-25"], ["funders", 0], ["created_at", "2018-05-25 01:01:47.878758"], ["updated_at", "2018-05-25 01:01:47.878758"]]
+  ↳ app/controllers/projects_controller.rb:33
+  [1m[35m (6.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/projects_controller.rb:33
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 7.7ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"index", :controller=>"projects", :user_id=>nil}, missing required keys: [:user_id]):
+  
+app/controllers/projects_controller.rb:34:in `block (2 levels) in create'
+app/controllers/projects_controller.rb:32:in `create'
+Started POST "/users/1/projects/new" for 127.0.0.1 at 2018-05-24 21:01:56 -0400
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"z1BiDbP1xoXsHxFkGbV2PW5uMxdeTo3X3zxVqtlwBecv6PsRPxxhDDDtTlDq4WYVlX9AkjXNUWq2jMaxGZ/qGg==", "project"=>{"name"=>"aasdzxcxzc", "description"=>"dsfagageagare", "goal"=>"11111", "date_limit(1i)"=>"2018", "date_limit(2i)"=>"5", "date_limit(3i)"=>"25", "funders"=>"0", "actual"=>"0", "user_id"=>"1"}, "commit"=>"Create", "id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/projects_controller.rb:33
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:33
+  [1m[36mProject Create (0.3ms)[0m  [1m[32mINSERT INTO "projects" ("name", "user_id", "description", "goal", "actual", "date_limit", "funders", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "aasdzxcxzc"], ["user_id", 1], ["description", "dsfagageagare"], ["goal", 11111], ["actual", 0], ["date_limit", "2018-05-25"], ["funders", 0], ["created_at", "2018-05-25 01:01:57.090092"], ["updated_at", "2018-05-25 01:01:57.090092"]]
+  ↳ app/controllers/projects_controller.rb:33
+  [1m[35m (13.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/projects_controller.rb:33
+Redirected to http://localhost:3000/projects/8
+Completed 302 Found in 67ms (ActiveRecord: 15.4ms)
+
+
+Started GET "/projects/8" for 127.0.0.1 at 2018-05-24 21:01:57 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:73
+Completed 404 Not Found in 3ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  
+app/controllers/projects_controller.rb:13:in `show'
+Started GET "/users/1/projects/new" for 127.0.0.1 at 2018-05-24 21:02:06 -0400
+Processing by ProjectsController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered projects/_form.html.erb (31.6ms)
+  Rendered projects/new.html.erb within layouts/application (34.5ms)
+  Rendered layouts/_rails_default.html.erb (79.5ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_sidenav.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 153ms (Views: 126.7ms | ActiveRecord: 4.4ms)
+
+
+Started POST "/users/1/projects/new" for 127.0.0.1 at 2018-05-24 21:02:08 -0400
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VcFO4/RrxMiIP20Pj8WS8AmlyP8hKxUBcQPXc3lSL7u1edf/eIJjQVTNMjt8kYLY8rS7ekqoybwYs0Roub3ARg==", "project"=>{"name"=>"aasdzxcxzc", "description"=>"dsfagageagare", "goal"=>"11111", "date_limit(1i)"=>"2018", "date_limit(2i)"=>"5", "date_limit(3i)"=>"25", "funders"=>"0", "actual"=>"0", "user_id"=>"1"}, "commit"=>"Create", "id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/projects_controller.rb:33
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:33
+  [1m[36mProject Create (0.9ms)[0m  [1m[32mINSERT INTO "projects" ("name", "user_id", "description", "goal", "actual", "date_limit", "funders", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "aasdzxcxzc"], ["user_id", 1], ["description", "dsfagageagare"], ["goal", 11111], ["actual", 0], ["date_limit", "2018-05-25"], ["funders", 0], ["created_at", "2018-05-25 01:02:08.558065"], ["updated_at", "2018-05-25 01:02:08.558065"]]
+  ↳ app/controllers/projects_controller.rb:33
+  [1m[35m (14.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/projects_controller.rb:33
+Redirected to http://localhost:3000/projects/9
+Completed 302 Found in 31ms (ActiveRecord: 15.9ms)
+
+
+Started GET "/projects/9" for 127.0.0.1 at 2018-05-24 21:02:08 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:73
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:14
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/show.html.erb:10
+  Rendered projects/show.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_rails_default.html.erb (85.0ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_sidenav.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 103ms (Views: 98.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects/Arrow.png" for 127.0.0.1 at 2018-05-24 21:02:08 -0400
+Processing by ProjectsController#show as PNG
+  Parameters: {"id"=>"Arrow"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:73
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Project with 'id'=Arrow):
+  
+app/controllers/projects_controller.rb:73:in `set_project'
+Started GET "/projects/9" for 127.0.0.1 at 2018-05-24 21:03:45 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:73
+Completed 404 Not Found in 31ms (ActiveRecord: 3.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  
+app/controllers/projects_controller.rb:13:in `show'
+Started GET "/projects/9" for 127.0.0.1 at 2018-05-24 21:04:49 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:74
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:14
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:15
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 2.4ms)
+
+
+  
+SyntaxError (/home/web/Desktop/beehive2/course-project-the-beehive/app/views/projects/show.html.erb:38: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+uffer.append=( if logged_in? );@output_buffer.safe_append='
+                              ^
+/home/web/Desktop/beehive2/course-project-the-beehive/app/views/projects/show.html.erb:39: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+@current_user.id == @user.id );@output_buffer.safe_append='
+                              ^
+/home/web/Desktop/beehive2/course-project-the-beehive/app/views/projects/show.html.erb:42: syntax error, unexpected keyword_else
+e;@output_buffer.append=( else );@output_buffer.safe_append=
+                              ^
+/home/web/Desktop/beehive2/course-project-the-beehive/app/views/projects/show.html.erb:43: syntax error, unexpected ')'
+ink_to 'Fund this Project!', );@output_buffer.safe_append='
+                              ^
+/home/web/Desktop/beehive2/course-project-the-beehive/app/views/projects/show.html.erb:44: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;   end 
+               ^
+/home/web/Desktop/beehive2/course-project-the-beehive/app/views/projects/show.html.erb:51: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/web/Desktop/beehive2/course-project-the-beehive/app/views/projects/show.html.erb:53: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/projects/show.html.erb:38: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+app/views/projects/show.html.erb:39: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+app/views/projects/show.html.erb:42: syntax error, unexpected keyword_else
+app/views/projects/show.html.erb:43: syntax error, unexpected ')'
+app/views/projects/show.html.erb:44: syntax error, unexpected keyword_end, expecting ')'
+app/views/projects/show.html.erb:51: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/projects/show.html.erb:53: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/projects/9" for 127.0.0.1 at 2018-05-24 21:05:13 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:74
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:14
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:15
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/home/web/Desktop/beehive2/course-project-the-beehive/app/views/projects/show.html.erb:43: syntax error, unexpected ')'
+ink_to 'Fund this Project!', );@output_buffer.safe_append='
+                              ^
+/home/web/Desktop/beehive2/course-project-the-beehive/app/views/projects/show.html.erb:44: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;   end 
+               ^
+/home/web/Desktop/beehive2/course-project-the-beehive/app/views/projects/show.html.erb:51: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/web/Desktop/beehive2/course-project-the-beehive/app/views/projects/show.html.erb:53: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/projects/show.html.erb:43: syntax error, unexpected ')'
+app/views/projects/show.html.erb:44: syntax error, unexpected keyword_end, expecting ')'
+app/views/projects/show.html.erb:51: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/projects/show.html.erb:53: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/projects/9" for 127.0.0.1 at 2018-05-24 21:05:30 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:74
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:14
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:15
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/show.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered projects/show.html.erb within layouts/application (23.1ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    36: </p>
+    37: 
+    38: <% if logged_in? %>
+    39:   <% if @current_user.id == @user.id %>
+    40:     <%= link_to 'Edit Project', edit_user_project_path(@project) %>
+    41:     <%= link_to 'Create new promise for this project', new_user_project_promise_path %>
+    42:   <% else %>
+  
+app/views/projects/show.html.erb:39:in `_app_views_projects_show_html_erb___3455753393851460516_69938112221340'
+Started GET "/projects/9" for 127.0.0.1 at 2018-05-24 21:07:10 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:73
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:14
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/show.html.erb:2
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/show.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered projects/show.html.erb within layouts/application (329.7ms)
+Completed 500 Internal Server Error in 354ms (ActiveRecord: 6.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `edit_user_project_path' for #<#<Class:0x007f37829d89e0>:0x007f37829d69b0>
+Did you mean?  new_user_project_path
+               edit_project_path):
+    37: 
+    38: <% if logged_in? %>
+    39:   <% if @current_user.id == @user.id %>
+    40:     <%= link_to 'Edit Project', edit_user_project_path(@project) %>
+    41:     <%= link_to 'Create new promise for this project', new_user_project_promise_path %>
+    42:   <% else %>
+    43:     <%= link_to 'Fund this Project!' %>
+  
+app/views/projects/show.html.erb:40:in `_app_views_projects_show_html_erb___3455753393851460516_69938195647000'
+Started GET "/projects/9" for 127.0.0.1 at 2018-05-24 21:07:33 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:73
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:14
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/show.html.erb:2
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/show.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered projects/show.html.erb within layouts/application (609.2ms)
+Completed 500 Internal Server Error in 634ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_user_project_promise_path' for #<#<Class:0x007f37829d89e0>:0x007f3781d743c0>
+Did you mean?  new_user_project_path
+               new_project_promise_path):
+    38: <% if logged_in? %>
+    39:   <% if @current_user.id == @user.id %>
+    40:     <%= link_to 'Edit Project' %>
+    41:     <%= link_to 'Create new promise for this project', new_user_project_promise_path %>
+    42:   <% else %>
+    43:     <%= link_to 'Fund this Project!' %>
+    44:   <% end %>
+  
+app/views/projects/show.html.erb:41:in `_app_views_projects_show_html_erb___3455753393851460516_69938189152140'
+Started GET "/projects/9" for 127.0.0.1 at 2018-05-24 21:07:44 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:73
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:14
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/show.html.erb:2
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/show.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered projects/show.html.erb within layouts/application (9.9ms)
+  Rendered layouts/_rails_default.html.erb (68.1ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_sidenav.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 93ms (Views: 88.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/Arrow.png" for 127.0.0.1 at 2018-05-24 21:07:44 -0400
+Processing by ProjectsController#show as PNG
+  Parameters: {"id"=>"Arrow"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:73
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Project with 'id'=Arrow):
+  
+app/controllers/projects_controller.rb:73:in `set_project'
+Started GET "/projects/9" for 127.0.0.1 at 2018-05-24 21:08:05 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:73
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:14
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/show.html.erb:2
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered projects/show.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_rails_default.html.erb (69.3ms)
+  Rendered layouts/_header.html.erb (4.3ms)
+  Rendered layouts/_sidenav.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 92ms (Views: 89.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/Arrow.png" for 127.0.0.1 at 2018-05-24 21:08:05 -0400
+Processing by ProjectsController#show as PNG
+  Parameters: {"id"=>"Arrow"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:73
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Project with 'id'=Arrow):
+  
+app/controllers/projects_controller.rb:73:in `set_project'
+Started GET "/projects/9" for 127.0.0.1 at 2018-05-24 21:09:47 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/web/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:73
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:14
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 1.3ms)
+
+
+  
+SyntaxError (/home/web/Desktop/beehive2/course-project-the-beehive/app/views/projects/show.html.erb:61: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+uffer.append=( if logged_in? );@output_buffer.safe_append='
+                              ^
+/home/web/Desktop/beehive2/course-project-the-beehive/app/views/projects/show.html.erb:62: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+@current_user.id == @user.id );@output_buffer.safe_append='
+                              ^
+/home/web/Desktop/beehive2/course-project-the-beehive/app/views/projects/show.html.erb:64: syntax error, unexpected keyword_else
+e;@output_buffer.append=( else );@output_buffer.safe_append=
+                              ^
+/home/web/Desktop/beehive2/course-project-the-beehive/app/views/projects/show.html.erb:66: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;     end 
+                 ^
+/home/web/Desktop/beehive2/course-project-the-beehive/app/views/projects/show.html.erb:75: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/web/Desktop/beehive2/course-project-the-beehive/app/views/projects/show.html.erb:77: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/projects/show.html.erb:61: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+app/views/projects/show.html.erb:62: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+app/views/projects/show.html.erb:64: syntax error, unexpected keyword_else
+app/views/projects/show.html.erb:66: syntax error, unexpected keyword_end, expecting ')'
+app/views/projects/show.html.erb:75: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/projects/show.html.erb:77: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/projects/9" for 127.0.0.1 at 2018-05-24 21:09:48 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:73
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:14
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/home/web/Desktop/beehive2/course-project-the-beehive/app/views/projects/show.html.erb:61: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+uffer.append=( if logged_in? );@output_buffer.safe_append='
+                              ^
+/home/web/Desktop/beehive2/course-project-the-beehive/app/views/projects/show.html.erb:62: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+@current_user.id == @user.id );@output_buffer.safe_append='
+                              ^
+/home/web/Desktop/beehive2/course-project-the-beehive/app/views/projects/show.html.erb:64: syntax error, unexpected keyword_else
+e;@output_buffer.append=( else );@output_buffer.safe_append=
+                              ^
+/home/web/Desktop/beehive2/course-project-the-beehive/app/views/projects/show.html.erb:66: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;     end 
+                 ^
+/home/web/Desktop/beehive2/course-project-the-beehive/app/views/projects/show.html.erb:75: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/web/Desktop/beehive2/course-project-the-beehive/app/views/projects/show.html.erb:77: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/projects/show.html.erb:61: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+app/views/projects/show.html.erb:62: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+app/views/projects/show.html.erb:64: syntax error, unexpected keyword_else
+app/views/projects/show.html.erb:66: syntax error, unexpected keyword_end, expecting ')'
+app/views/projects/show.html.erb:75: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/projects/show.html.erb:77: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/projects/9" for 127.0.0.1 at 2018-05-24 21:10:10 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:73
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:14
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/show.html.erb:2
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered projects/show.html.erb within layouts/application (38.9ms)
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 3.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    45: <% end %>
+    46: 
+    47: <h2> Promises: </h2>
+    48: <% @promises.each do |promise| %>
+    49:   <h3>
+    50:     <%= promise.description %>
+    51:   </h3>
+  
+app/views/projects/show.html.erb:48:in `_app_views_projects_show_html_erb__3319507559508923551_21075940'
+Started GET "/projects/9" for 127.0.0.1 at 2018-05-24 21:10:45 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:73
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:14
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/show.html.erb:2
+  Rendered projects/show.html.erb within layouts/application (57.4ms)
+Completed 500 Internal Server Error in 67ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `index' for #<Class:0x0000000325b428>):
+    1: <p id="notice"><%= notice %></p>
+    2: <% @user ||= User.find_by(id: @project.user_id) %>
+    3: <% @promises = Promise.index %>
+    4: <p>
+    5:   <strong>Name:</strong>
+    6:   <%= @project.name %>
+  
+app/views/projects/show.html.erb:3:in `_app_views_projects_show_html_erb__3319507559508923551_27866700'
+Started GET "/projects/9" for 127.0.0.1 at 2018-05-24 21:11:38 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:73
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:14
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/show.html.erb:2
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mPromise Load (0.1ms)[0m  [1m[34mSELECT "promises".* FROM "promises"[0m
+  ↳ app/views/projects/show.html.erb:49
+  Rendered projects/show.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_rails_default.html.erb (436.2ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_sidenav.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 459ms (Views: 455.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/Arrow.png" for 127.0.0.1 at 2018-05-24 21:11:38 -0400
+Processing by ProjectsController#show as PNG
+  Parameters: {"id"=>"Arrow"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:73
+Completed 404 Not Found in 7ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Project with 'id'=Arrow):
+  
+app/controllers/projects_controller.rb:73:in `set_project'
+Started GET "/projects/9" for 127.0.0.1 at 2018-05-24 21:11:41 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:73
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:14
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/show.html.erb:2
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mPromise Load (0.1ms)[0m  [1m[34mSELECT "promises".* FROM "promises"[0m
+  ↳ app/views/projects/show.html.erb:49
+  Rendered projects/show.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_rails_default.html.erb (88.1ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_sidenav.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 110ms (Views: 105.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects/Arrow.png" for 127.0.0.1 at 2018-05-24 21:11:41 -0400
+Processing by ProjectsController#show as PNG
+  Parameters: {"id"=>"Arrow"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:73
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Project with 'id'=Arrow):
+  
+app/controllers/projects_controller.rb:73:in `set_project'
+Started GET "/projects/9" for 127.0.0.1 at 2018-05-24 21:11:42 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:73
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:14
+  Rendering projects/show.html.erb within layouts/application
+Started GET "/projects/Arrow.png" for 127.0.0.1 at 2018-05-24 21:11:42 -0400
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/show.html.erb:2
+Processing by ProjectsController#show as PNG
+  Parameters: {"id"=>"Arrow"}
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  ↳ app/controllers/projects_controller.rb:73
+  [1m[36mPromise Load (0.2ms)[0m  [1m[34mSELECT "promises".* FROM "promises"[0m
+Completed 404 Not Found in 3ms (ActiveRecord: 0.2ms)
+
+
+  ↳ app/views/projects/show.html.erb:49
+  
+ActiveRecord::RecordNotFound (Couldn't find Project with 'id'=Arrow):
+  Rendered projects/show.html.erb within layouts/application (10.2ms)
+  
+app/controllers/projects_controller.rb:73:in `set_project'
+  Rendered layouts/_rails_default.html.erb (239.3ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_sidenav.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 302ms (Views: 298.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/projects/Arrow.png" for 127.0.0.1 at 2018-05-24 21:12:05 -0400
+Processing by ProjectsController#show as PNG
+  Parameters: {"id"=>"Arrow"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:73
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Project with 'id'=Arrow):
+  
+app/controllers/projects_controller.rb:73:in `set_project'
+Started GET "/projects/9" for 127.0.0.1 at 2018-05-24 21:12:06 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:73
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:14
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/show.html.erb:2
+  Rendered projects/show.html.erb within layouts/application (27.6ms)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `promises' for #<Project:0x007fb3d97980a8>):
+    1: <p id="notice"><%= notice %></p>
+    2: <% @user ||= User.find_by(id: @project.user_id) %>
+    3: <% @promises = @project.promises %>
+    4: <p>
+    5:   <strong>Name:</strong>
+    6:   <%= @project.name %>
+  
+app/views/projects/show.html.erb:3:in `_app_views_projects_show_html_erb__3319507559508923551_70205212243680'
+Started GET "/projects/9" for 127.0.0.1 at 2018-05-24 21:13:39 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:73
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:14
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/show.html.erb:2
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."project_id" = ? LIMIT ?[0m  [["project_id", 9], ["LIMIT", 1]]
+  ↳ app/views/projects/show.html.erb:3
+  Rendered projects/show.html.erb within layouts/application (10.2ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: projects.project_id: SELECT  "projects".* FROM "projects" WHERE "projects"."project_id" = ? LIMIT ?):
+    1: <p id="notice"><%= notice %></p>
+    2: <% @user ||= User.find_by(id: @project.user_id) %>
+    3: <% @promises ||= Project.find_by(project_id: @project.id) %>
+    4: <p>
+    5:   <strong>Name:</strong>
+    6:   <%= @project.name %>
+  
+app/views/projects/show.html.erb:3:in `_app_views_projects_show_html_erb__3319507559508923551_70205206015040'
+Started GET "/projects/9" for 127.0.0.1 at 2018-05-24 21:14:03 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:73
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:14
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/show.html.erb:2
+  Rendered projects/show.html.erb within layouts/application (56.5ms)
+Completed 500 Internal Server Error in 67ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::Promises):
+    1: <p id="notice"><%= notice %></p>
+    2: <% @user ||= User.find_by(id: @project.user_id) %>
+    3: <% @promises ||= Promises.find_by(project_id: @project.id) %>
+    4: <p>
+    5:   <strong>Name:</strong>
+    6:   <%= @project.name %>
+  
+app/views/projects/show.html.erb:3:in `_app_views_projects_show_html_erb__3319507559508923551_70205210634700'
+Started GET "/projects/9" for 127.0.0.1 at 2018-05-24 21:14:09 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:73
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:14
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/show.html.erb:2
+  [1m[36mPromise Load (0.3ms)[0m  [1m[34mSELECT  "promises".* FROM "promises" WHERE "promises"."project_id" = ? LIMIT ?[0m  [["project_id", 9], ["LIMIT", 1]]
+  ↳ app/views/projects/show.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered projects/show.html.erb within layouts/application (10.3ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    46: <% end %>
+    47: 
+    48: <h2> Promises: </h2>
+    49: <% @promises.each do |promise| %>
+    50:   <h3>
+    51:     <%= promise.description %>
+    52:   </h3>
+  
+app/views/projects/show.html.erb:49:in `_app_views_projects_show_html_erb__3319507559508923551_70205205490800'
+Started GET "/projects/9" for 127.0.0.1 at 2018-05-24 21:14:55 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:73
+  [1m[36mCACHE Project Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:14
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/show.html.erb:2
+  [1m[36mPromise Load (0.1ms)[0m  [1m[34mSELECT  "promises".* FROM "promises" WHERE "promises"."project_id" = ? LIMIT ?[0m  [["project_id", 9], ["LIMIT", 1]]
+  ↳ app/views/projects/show.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered projects/show.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_rails_default.html.erb (93.3ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_sidenav.html.erb (2.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 125ms (Views: 118.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects/Arrow.png" for 127.0.0.1 at 2018-05-24 21:14:56 -0400
+Processing by ProjectsController#show as PNG
+  Parameters: {"id"=>"Arrow"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:73
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Project with 'id'=Arrow):
+  
+app/controllers/projects_controller.rb:73:in `set_project'
+Started GET "/projects/9" for 127.0.0.1 at 2018-05-24 21:15:00 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:73
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:14
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/show.html.erb:2
+  [1m[36mPromise Load (0.1ms)[0m  [1m[34mSELECT  "promises".* FROM "promises" WHERE "promises"."project_id" = ? LIMIT ?[0m  [["project_id", 9], ["LIMIT", 1]]
+  ↳ app/views/projects/show.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered projects/show.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_rails_default.html.erb (89.9ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_sidenav.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 115ms (Views: 111.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/Arrow.png" for 127.0.0.1 at 2018-05-24 21:15:00 -0400
+Processing by ProjectsController#show as PNG
+  Parameters: {"id"=>"Arrow"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:73
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Project with 'id'=Arrow):
+  
+app/controllers/projects_controller.rb:73:in `set_project'
