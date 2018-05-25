@@ -70,9 +70,11 @@ class ProjectsController < ApplicationController
     @user ||= User.find_by(id: @project.user_id)
   end
 
-  def fund
+  def create_fund
+    @fund= Fund.new(amount: params[:amount], user: @current_user, project: @project_id)
+    @project.update(actual: @project.actual + params[:q])
     respond_to do |format|
-      if @project.update(actual: @project.actual + params[:q])
+      if
         format.html { redirect_to @project, notice: 'Funded successfully.' }
         format.json { render :show, status: :ok, location: @project }
       else

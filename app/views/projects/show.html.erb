@@ -34,7 +34,7 @@
     <%= link_to 'Edit Project' %>
     <%= link_to 'Add a new promise', new_project_promise_path(@user, @project) %>
   <% else %>
-    <%= link_to 'Fund this Project!', new_project_fund_path(@user, @project) %>
+    <%= link_to 'Fund this Project!', controller: 'projects', action: 'new_fund' %>
   <% end %>
 <% end %>
 
