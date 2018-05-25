@@ -10,7 +10,8 @@ Rails.application.routes.draw do
   get 'projects/:id/fund', to: 'projects#fund'
 
   post '/users/:id/projects/new', to: 'projects#create'
-  post '/projects/:project_id/promises', to: 'promises#create'
+
+  post '/projects/:project_id/promises/new', to: 'promises#create'
 
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'

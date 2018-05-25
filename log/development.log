@@ -34131,3 +34131,129 @@ puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
 puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/projects/1/promises/new.1" for 127.0.0.1 at 2018-05-24 22:08:39 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/web/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by PromisesController#new as 
+  Parameters: {"project_id"=>"1"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/promises_controller.rb:17
+  Rendering promises/new.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered promises/_form.html.erb (25.8ms)
+  Rendered promises/new.html.erb within layouts/application (36.4ms)
+  Rendered layouts/_rails_default.html.erb (398.3ms)
+  Rendered layouts/_header.html.erb (3.8ms)
+  Rendered layouts/_sidenav.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 560ms (Views: 494.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/projects/1/promises/Arrow.png" for 127.0.0.1 at 2018-05-24 22:08:40 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/projects/1/promises/Arrow.png"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/projects/1/promises/new" for 127.0.0.1 at 2018-05-24 22:08:43 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/projects/1/promises/new"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/projects/1/promises/new" for 127.0.0.1 at 2018-05-24 22:09:04 -0400
+Processing by PromisesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/tJZ3ESiQkkbWMl5BtDcSZZZACk1NeLpidg+VCv4MmUeasDAyEvlwMeqlk31hMxhbUhzrF62PlTgaK1P6xfdmA==", "promise"=>{"description"=>"asdasdsadads", "min"=>"1", "delivery_date(1i)"=>"2018", "delivery_date(2i)"=>"5", "delivery_date(3i)"=>"25", "project_id"=>"1", "buyers"=>"0"}, "commit"=>"Create", "project_id"=>"1"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/promises_controller.rb:31
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/promises_controller.rb:31
+  [1m[36mPromise Create (0.4ms)[0m  [1m[32mINSERT INTO "promises" ("project_id", "description", "min", "delivery_date", "buyers", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["project_id", 1], ["description", "asdasdsadads"], ["min", 1], ["delivery_date", "2018-05-25"], ["buyers", 0], ["created_at", "2018-05-25 02:09:04.691419"], ["updated_at", "2018-05-25 02:09:04.691419"]]
+  ↳ app/controllers/promises_controller.rb:31
+  [1m[35m (63.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/promises_controller.rb:31
+Redirected to http://localhost:3000/promises/1
+Completed 302 Found in 105ms (ActiveRecord: 67.0ms)
+
+
+Started GET "/promises/1" for 127.0.0.1 at 2018-05-24 22:09:04 -0400
+Processing by PromisesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPromise Load (0.2ms)[0m  [1m[34mSELECT  "promises".* FROM "promises" WHERE "promises"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/promises_controller.rb:68
+  Rendering promises/show.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/promises/show.html.erb:5
+  Rendered promises/show.html.erb within layouts/application (25.0ms)
+  Rendered layouts/_rails_default.html.erb (95.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered layouts/_header.html.erb (20.9ms)
+  Rendered layouts/_sidenav.html.erb (2.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 160ms (Views: 156.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/promises/Arrow.png" for 127.0.0.1 at 2018-05-24 22:09:04 -0400
+Processing by PromisesController#show as PNG
+  Parameters: {"id"=>"Arrow"}
+  [1m[36mPromise Load (0.2ms)[0m  [1m[34mSELECT  "promises".* FROM "promises" WHERE "promises"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/promises_controller.rb:68
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Promise with 'id'=Arrow):
+  
+app/controllers/promises_controller.rb:68:in `set_promise'
