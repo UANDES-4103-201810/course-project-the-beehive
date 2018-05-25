@@ -20,15 +20,13 @@
       <% end %>
 
     </section>
-    <h2> Projects: </h2>
+    <h3> Projects: </h3>
     <% @projects.each do |project| %>
-      <h3>
-        <%= project.name %>
-        <%= link_to "link" , project_path(project) %>
-      </h3>
-      <h4>
+      <h2>
+        <%= link_to project.name , project_path(project) %>:
         <%= project.description %>
-      </h4>
+      </h2>
+
     <% end %>
   </aside>
 </div>

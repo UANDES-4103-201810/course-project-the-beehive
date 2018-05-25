@@ -1,29 +1,22 @@
-<p id="notice"><%= notice %></p>
-<% @user ||= User.find_by(id: @project.user_id) %>
-<% @promises ||= Promise.find_by(project_id: @project.id) %>
-<p>
-  <strong>Name:</strong>
+<h1>
   <%= @project.name %>
-</p>
+</h1>
 
-<p>
-  <strong>User:</strong>
-  <%= @user.name %>
-</p>
+<h2>
+  <%= link_to @user.name, @user%>
+</h2>
 
-<p>
+<h3>
   <strong>Description:</strong>
   <%= @project.description %>
-</p>
+</h3>
 
-<p>
-  <strong>Goal:</strong>
-  <%= @project.goal %>
-</p>
-
+<progress max=<%= @project.goal %> value=<%= @project.actual %>> <%= @project.actual*100/@project.goal %> %</progress>
 <p>
   <strong>Actual:</strong>
   <%= @project.actual %>
+  <strong>Goal:</strong>
+  <%= @project.goal %>
 </p>
 
 <p>
@@ -39,30 +32,35 @@
 <% if logged_in? %>
   <% if @current_user.id == @user.id %>
     <%= link_to 'Edit Project' %>
-    <%= link_to 'Create new promise for this project', new_project_promise_path(@user, @project) %>
+    <%= link_to 'Add a new promise', new_project_promise_path(@user, @project) %>
   <% else %>
-    <%= link_to 'Fund this Project!' %>
+    <%= link_to 'Fund this Project!'%>
   <% end %>
 <% end %>
 
-<h2> Promises: </h2>
+<hr>
+
+<h3> Promises: </h3>
 <% if @promises != nil %>
   <% @promises.each do |promise| %>
     <h3>
       <%= promise.description %>
     </h3>
-    <h3>
+    <h5>
+      Min. amount to buy:
       <%= promise.min %>
-    </h3>
-    <h3>
+    </h5>
+    <h5>
+      Date of delivery (Aprox.):
       <%= promise.delivery_date %>
-    </h3>
-    <h3>
+    </h5>
+    <h5>
+      Buyers:
       <%= promise.buyers %>
-    </h3>
+    </h5>
     <% if logged_in? %>
       <% if @current_user.id == @user.id %>
-        <%= link_to 'Edit Promise', edit_user_project__promise_path(@project) %>
+        <%= link_to 'Edit Promise', edit_promise_path %>
       <% else %>
         <%= link_to 'Buy this promise!' %>
       <% end %>
@@ -70,6 +68,3 @@
   <% end %>
 <% end %>
 </aside>
-
-
-<%= link_to 'Edit', edit_project_path(@project) %>

@@ -29,8 +29,7 @@ class PromisesController < ApplicationController
 
     respond_to do |format|
       if @promise.save
-        format.html { redirect_to @promise, notice: 'Promise was successfully created.' }
-        format.json { render :show, status: :created, location: @promise }
+        format.html { redirect_to @promise.project, notice: 'Promise was successfully created.' }
       else
         format.html { render :new }
         format.json { render json: @promise.errors, status: :unprocessable_entity }
