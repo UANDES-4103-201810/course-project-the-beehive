@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   post '/register', to: 'users#create'
   get '/users/:id/settings', to: 'users#edit'
 
+  get '/projects', to: 'projects#index'
+
   get '/projects/:id/fund', to: 'projects#new_fund'
   post '/projects/:id/fund', to: 'projects#create_fund'
 

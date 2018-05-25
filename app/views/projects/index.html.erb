@@ -1,39 +1,18 @@
-<p id="notice"><%= notice %></p>
+<% provide(:title, 'Projects') %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
 
-<h1>Projects</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>User</th>
-      <th>Description</th>
-      <th>Goal</th>
-      <th>Actual</th>
-      <th>Date limit</th>
-      <th>Funders</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+    </section>
+    <h1> Projects: </h1>
     <% @projects.each do |project| %>
-      <tr>
-        <td><%= project.name %></td>
-        <td><%= project.user %></td>
-        <td><%= project.description %></td>
-        <td><%= project.goal %></td>
-        <td><%= project.actual %></td>
-        <td><%= project.date_limit %></td>
-        <td><%= project.funders %></td>
-        <td><%= link_to 'Show', project %></td>
-        <td><%= link_to 'Edit', edit_project_path(project) %></td>
-        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <h4>
+        <%= link_to project.name , project_path(project) %>:
+        <%= project.description %>
+      </h4>
+
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Project', new_project_path %>
+  </aside>
+</div>
+<%= link_to 'Back', home_path %>
