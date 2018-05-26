@@ -13,7 +13,8 @@ Rails.application.routes.draw do
   get '/projects/:id/fund', to: 'projects#new_fund'
   post '/projects/:id/fund', to: 'projects#create_fund'
 
-  post '/user/:id/follow', to: 'users#follow'
+  post '/users/:id/follow', to: 'users#follow'
+  post '/projects/:id/favorite', to: 'projects#favorite'
 
   post '/users/:id/projects/new', to: 'projects#create'
   post '/projects/:project_id/promises/new', to: 'promises#create'

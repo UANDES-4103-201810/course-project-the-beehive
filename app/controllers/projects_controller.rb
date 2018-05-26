@@ -3,6 +3,17 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: %i[show edit update destroy]
 
+  def favorite
+    @project = Project.find(params[:favorite_project])
+    @user= User.find(params[:favorite_user])
+    @favorite = Favorite.new(project: @project, user: @user)
+    if @favorite.save
+      redirect_to @project, notice: 'Added to favorites!'
+    else
+      redirect_to @project, notice: 'Failed'
+    end
+  end
+
   # GET /projects
   # GET /projects.json
   def index
