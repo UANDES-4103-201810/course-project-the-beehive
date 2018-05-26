@@ -24,6 +24,9 @@
 
     <%= form.label :date_limit %>
     <%= form.date_select :date_limit %>
+      <% if @current_user=='admin' %>
+        <%= check_box(:outstanding, 'Outstanding') %>
+      <% end %>
     </div>
 
     <%= form.submit "Update", class: 'btn btn-primary' %>

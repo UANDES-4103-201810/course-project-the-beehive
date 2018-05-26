@@ -30,6 +30,7 @@ $ rails server
     * Project Promises
 * Admin User
     * Users
+    * Projects
 * Extra
     * Feedback
 * Bootstrap
@@ -43,7 +44,6 @@ $ rails server
 * Registered User
     * Project Categories
 * Admin User
-    * Projects
     * Categories
 * File Controller
 * Extras

@@ -49018,3 +49018,789 @@ Completed 500 Internal Server Error in 28ms (ActiveRecord: 1.5ms)
 ActiveModel::MissingAttributeError (can't write unknown attribute `project_id`):
   
 app/controllers/projects_controller.rb:9:in `favorite'
+Started GET "/projects" for 127.0.0.1 at 2018-05-25 23:22:00 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/gus/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered projects/index.html.erb within layouts/application (38.8ms)
+  Rendered layouts/_rails_default.html.erb (165.9ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_sidenav.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 226ms (Views: 212.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/projects/1" for 127.0.0.1 at 2018-05-25 23:23:45 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:103
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:26
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:27
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mPromise Load (0.1ms)[0m  [1m[34mSELECT "promises".* FROM "promises" WHERE "promises"."project_id" = ?[0m  [["project_id", 1]]
+  ↳ app/views/projects/show.html.erb:52
+  Rendered projects/show.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_rails_default.html.erb (53.6ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_sidenav.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 102ms (Views: 64.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/projects/1/fund" for 127.0.0.1 at 2018-05-25 23:23:47 -0400
+Processing by ProjectsController#new_fund as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:80
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:81
+  Rendering projects/new_fund.html.erb within layouts/application
+  Rendered projects/new_fund.html.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+     9:   <div class="row">
+    10:     <div class="col-md-1">
+    11:       <%= f.number_field :amount %>
+    12:       <%= f.hidden_field :user_id, value: @current_user.id %>
+    13:       <%= f.hidden_field :project_id, value: @project.id %>
+    14: 
+    15:       <%= f.submit "Fund", class: "btn btn-primary" %>
+  
+app/views/projects/new_fund.html.erb:12:in `block in _app_views_projects_new_fund_html_erb__3514335888395870357_70292659828660'
+app/views/projects/new_fund.html.erb:5:in `_app_views_projects_new_fund_html_erb__3514335888395870357_70292659828660'
+Started GET "/projects/1" for 127.0.0.1 at 2018-05-25 23:23:59 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:103
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:26
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:27
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mPromise Load (0.3ms)[0m  [1m[34mSELECT "promises".* FROM "promises" WHERE "promises"."project_id" = ?[0m  [["project_id", 1]]
+  ↳ app/views/projects/show.html.erb:52
+  Rendered projects/show.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_rails_default.html.erb (41.3ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_sidenav.html.erb (3.4ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 63ms (Views: 59.0ms | ActiveRecord: 0.9ms)
+
+
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/projects/1" for 127.0.0.1 at 2018-05-25 23:26:04 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/gus/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:103
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:26
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:27
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mPromise Load (0.1ms)[0m  [1m[34mSELECT "promises".* FROM "promises" WHERE "promises"."project_id" = ?[0m  [["project_id", 1]]
+  ↳ app/views/projects/show.html.erb:52
+  Rendered projects/show.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_rails_default.html.erb (184.5ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_sidenav.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 258ms (Views: 202.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2018-05-25 23:26:12 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered projects/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_rails_default.html.erb (75.7ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_sidenav.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 86ms (Views: 84.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-05-25 23:26:29 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from _app_views_pages_home_html_erb__4121596108729609306_70114521627300 at /home/gus/Desktop/uandes/web/Assignment/The Beehive/course-project-the-beehive/app/views/pages/home.html.erb:15)
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/pages/home.html.erb:16
+  Rendered pages/home.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_rails_default.html.erb (38.3ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_sidenav.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 48ms (Views: 46.3ms | ActiveRecord: 0.4ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddOutstandingToProjects (20180526032758)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "projects" ADD "outstanding" bool[0m
+  ↳ db/migrate/20180526032758_add_outstanding_to_projects.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180526032758"]]
+  ↳ bin/rails:9
+  [1m[35m (212.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/home" for 127.0.0.1 at 2018-05-25 23:41:04 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/gus/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from _app_views_pages_home_html_erb__2560886643651047632_47005227580980 at /home/gus/Desktop/uandes/web/Assignment/The Beehive/course-project-the-beehive/app/views/pages/home.html.erb:15)
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/pages/home.html.erb:16
+  Rendered pages/home.html.erb within layouts/application (42.3ms)
+  Rendered layouts/_rails_default.html.erb (188.7ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_sidenav.html.erb (3.6ms)
+  Rendered layouts/_footer.html.erb (1.4ms)
+Completed 200 OK in 248ms (Views: 242.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/projects/1" for 127.0.0.1 at 2018-05-25 23:41:11 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:103
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:26
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:27
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mPromise Load (0.1ms)[0m  [1m[34mSELECT "promises".* FROM "promises" WHERE "promises"."project_id" = ?[0m  [["project_id", 1]]
+  ↳ app/views/projects/show.html.erb:52
+  Rendered projects/show.html.erb within layouts/application (8.6ms)
+  Rendered layouts/_rails_default.html.erb (57.5ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_sidenav.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 89ms (Views: 76.0ms | ActiveRecord: 1.4ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2018-05-25 23:41:30 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"OtYJwXBt5ar0fn0mca7iSyiieioDjCvCEawm6Q4n6S0bo+n05nFdBEtCn8ZRFgYzrZvHrBPJ+Wa2sqmIyvfeqQ=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-25 23:41:30 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from _app_views_pages_home_html_erb__2560886643651047632_70123075148580 at /home/gus/Desktop/uandes/web/Assignment/The Beehive/course-project-the-beehive/app/views/pages/home.html.erb:15)
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/pages/home.html.erb:16
+  Rendered pages/home.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_rails_default.html.erb (35.7ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered layouts/_header.html.erb (1.5ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered layouts/_sidenav.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 51ms (Views: 47.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-25 23:41:31 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_rails_default.html.erb (39.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered layouts/_header.html.erb (1.2ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered layouts/_sidenav.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 52ms (Views: 50.9ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-05-25 23:41:46 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fuZkqot+rmdZX9sXuFaduIR15/udllUolkkYoDWW2DGqqHqKC1XR/VRzL82f7i3z07FVxTCrwuz0bKDoWvVX2Q==", "session"=>{"email"=>"soymomo@momo.cl", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "soymomo@momo.cl"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_rails_default.html.erb (36.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered layouts/_header.html.erb (1.1ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered layouts/_sidenav.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 48ms (Views: 45.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-25 23:42:51 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_rails_default.html.erb (38.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered layouts/_header.html.erb (9.0ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered layouts/_sidenav.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 54ms (Views: 52.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-05-25 23:42:58 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aVyrtLIA2QEeH8CJCzcUaNlbPEqZbCfzT7zj1l+vkeVIKUuBJBxhr6EjImkrj/AQXGKBzIkp9Vfoomy3m3+mYQ==", "session"=>{"email"=>"gpvicuna@miuandes.cl", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gpvicuna@miuandes.cl"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 67ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-05-25 23:42:58 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:27
+  Rendered users/show.html.erb within layouts/application (8.4ms)
+  Rendered layouts/_rails_default.html.erb (36.1ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered layouts/_header.html.erb (1.1ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered layouts/_sidenav.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 64ms (Views: 50.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-25 23:43:13 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_rails_default.html.erb (47.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered layouts/_header.html.erb (7.2ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered layouts/_sidenav.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 66ms (Views: 64.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-05-25 23:43:15 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yvP2PwPbcRsdA+/GG5iNaSlkjpKsBTdafsNTQz+Ut9/rhhYKlcfJtaI/DSY7IGkRrF0zFLxA5f7Z3dwi+0SAWw==", "session"=>{"email"=>"gpvicuna@miuandes.cl", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gpvicuna@miuandes.cl"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9
+Redirected to 
+Completed 500 Internal Server Error in 67ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionController::ActionControllerError (Cannot redirect to nil!):
+  
+app/controllers/sessions_controller.rb:14:in `create'
+Started POST "/login" for 127.0.0.1 at 2018-05-25 23:43:45 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yvP2PwPbcRsdA+/GG5iNaSlkjpKsBTdafsNTQz+Ut9/rhhYKlcfJtaI/DSY7IGkRrF0zFLxA5f7Z3dwi+0SAWw==", "session"=>{"email"=>"gpvicuna@miuandes.cl", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gpvicuna@miuandes.cl"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9
+Redirected to http://localhost:3000/login
+Completed 302 Found in 70ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-25 23:43:45 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_rails_default.html.erb (41.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered layouts/_header.html.erb (1.3ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered layouts/_sidenav.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 51ms (Views: 50.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-05-25 23:43:50 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4DgATg2v92SSIkMWOAYXG7pVAc0g0sujgS+MOs0VVjvBTeB7m7NPyi0eofYYvvNjP2y8SzCXGQcmMQNbCcVhvw==", "session"=>{"email"=>"gpvicuna@miuandes.cl", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gpvicuna@miuandes.cl"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 58ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-05-25 23:43:50 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:27
+  Rendered users/show.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_rails_default.html.erb (47.8ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_sidenav.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 73ms (Views: 59.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/1/projects/new" for 127.0.0.1 at 2018-05-25 23:43:52 -0400
+Processing by ProjectsController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered projects/_form.html.erb (3.5ms)
+  Rendered projects/new.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_rails_default.html.erb (32.7ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_sidenav.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 57ms (Views: 45.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users/1/projects/new" for 127.0.0.1 at 2018-05-25 23:44:18 -0400
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J07yTjtckbWlPMkhjSP1xFRcgAE6gYVNwzpBV7vAbWyxM6MYs/kLpA5V/ahbOo3aMLaV5bpBr/+DHpU4rYAjeQ==", "project"=>{"name"=>"Mi proyecto hermoso", "description"=>"Esta es la descripcion de mi proyecto", "goal"=>"50", "date_limit(1i)"=>"2019", "date_limit(2i)"=>"5", "date_limit(3i)"=>"26", "funders"=>"0", "actual"=>"0", "user_id"=>"1"}, "commit"=>"Create", "id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/projects_controller.rb:45
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:45
+  [1m[36mProject Create (1.9ms)[0m  [1m[32mINSERT INTO "projects" ("name", "user_id", "description", "goal", "actual", "date_limit", "funders", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mi proyecto hermoso"], ["user_id", 1], ["description", "Esta es la descripcion de mi proyecto"], ["goal", 50], ["actual", 0], ["date_limit", "2019-05-26"], ["funders", 0], ["created_at", "2018-05-26 03:44:18.609800"], ["updated_at", "2018-05-26 03:44:18.609800"]]
+  ↳ app/controllers/projects_controller.rb:45
+  [1m[35m (115.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/projects_controller.rb:45
+Redirected to http://localhost:3000/projects/2
+Completed 302 Found in 146ms (ActiveRecord: 117.5ms)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2018-05-25 23:44:18 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:103
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:26
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:27
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mPromise Load (0.2ms)[0m  [1m[34mSELECT "promises".* FROM "promises" WHERE "promises"."project_id" = ?[0m  [["project_id", 2]]
+  ↳ app/views/projects/show.html.erb:52
+  Rendered projects/show.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_rails_default.html.erb (40.1ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_sidenav.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 55ms (Views: 49.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects/2/edit" for 127.0.0.1 at 2018-05-25 23:44:20 -0400
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:103
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form default.html.erb (3.5ms)
+  Rendered projects/edit.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_rails_default.html.erb (36.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_sidenav.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 53ms (Views: 51.4ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/projects/2" for 127.0.0.1 at 2018-05-25 23:44:23 -0400
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"L/C9OX5R5okMhY8NSPILJ8JMRDScxUkIRnhpS9qpr8cfOnwB7tV2BO+jgnPJuUwpaVawYS4M55ru3kG+AxVI/A==", "project"=>{"name"=>"Mi proyecto hermoso", "description"=>"Esta es la descripcion de mi proyecto", "goal"=>"50", "date_limit(1i)"=>"2019", "date_limit(2i)"=>"5", "date_limit(3i)"=>"26"}, "commit"=>"Update", "id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:103
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/projects_controller.rb:59
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:59
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/projects_controller.rb:59
+Redirected to http://localhost:3000/projects/2
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2018-05-25 23:44:23 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:103
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:26
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:27
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mPromise Load (0.2ms)[0m  [1m[34mSELECT "promises".* FROM "promises" WHERE "promises"."project_id" = ?[0m  [["project_id", 2]]
+  ↳ app/views/projects/show.html.erb:52
+  Rendered projects/show.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_rails_default.html.erb (43.8ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_sidenav.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 58ms (Views: 55.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-05-25 23:44:30 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:27
+  Rendered users/show.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_rails_default.html.erb (41.6ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_sidenav.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 58ms (Views: 54.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-25 23:44:32 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from _app_views_pages_home_html_erb__2560886643651047632_47005227588160 at /home/gus/Desktop/uandes/web/Assignment/The Beehive/course-project-the-beehive/app/views/pages/home.html.erb:15)
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/pages/home.html.erb:16
+  Rendered pages/home.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_rails_default.html.erb (47.6ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_sidenav.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 65ms (Views: 63.6ms | ActiveRecord: 0.4ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "category_projects"[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (98.9ms)[0m  [1m[35mCREATE TABLE "category_projects" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "category" varchar, "project_id_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (73.6ms)[0m  [1m[35mCREATE  INDEX "index_category_projects_on_project_id_id" ON "category_projects" ("project_id_id")[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "comments"[0m
+  ↳ db/schema.rb:23
+  [1m[35m (66.6ms)[0m  [1m[35mCREATE TABLE "comments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "content" varchar, "user_id_id" integer, "project_id_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:23
+  [1m[35m (83.2ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_project_id_id" ON "comments" ("project_id_id")[0m
+  ↳ db/schema.rb:23
+  [1m[35m (74.9ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_user_id_id" ON "comments" ("user_id_id")[0m
+  ↳ db/schema.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "emails"[0m
+  ↳ db/schema.rb:33
+  [1m[35m (74.1ms)[0m  [1m[35mCREATE TABLE "emails" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "mail" varchar, "user_id_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:33
+  [1m[35m (76.5ms)[0m  [1m[35mCREATE  INDEX "index_emails_on_user_id_id" ON "emails" ("user_id_id")[0m
+  ↳ db/schema.rb:33
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "favorites"[0m
+  ↳ db/schema.rb:41
+  [1m[35m (66.4ms)[0m  [1m[35mCREATE TABLE "favorites" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id_id" integer, "project_id_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:41
+  [1m[35m (57.5ms)[0m  [1m[35mCREATE  INDEX "index_favorites_on_project_id_id" ON "favorites" ("project_id_id")[0m
+  ↳ db/schema.rb:41
+  [1m[35m (59.8ms)[0m  [1m[35mCREATE  INDEX "index_favorites_on_user_id_id" ON "favorites" ("user_id_id")[0m
+  ↳ db/schema.rb:41
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "follows"[0m
+  ↳ db/schema.rb:50
+  [1m[35m (57.6ms)[0m  [1m[35mCREATE TABLE "follows" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "follower_id" integer, "followed_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:50
+  [1m[35m (57.5ms)[0m  [1m[35mCREATE  INDEX "index_follows_on_followed_id" ON "follows" ("followed_id")[0m
+  ↳ db/schema.rb:50
+  [1m[35m (417.3ms)[0m  [1m[35mCREATE  INDEX "index_follows_on_follower_id" ON "follows" ("follower_id")[0m
+  ↳ db/schema.rb:50
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "funds"[0m
+  ↳ db/schema.rb:59
+  [1m[35m (57.6ms)[0m  [1m[35mCREATE TABLE "funds" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id_id" integer, "project_id_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "amount" integer)[0m
+  ↳ db/schema.rb:59
+  [1m[35m (75.1ms)[0m  [1m[35mCREATE  INDEX "index_funds_on_project_id_id" ON "funds" ("project_id_id")[0m
+  ↳ db/schema.rb:59
+  [1m[35m (73.9ms)[0m  [1m[35mCREATE  INDEX "index_funds_on_user_id_id" ON "funds" ("user_id_id")[0m
+  ↳ db/schema.rb:59
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "phones"[0m
+  ↳ db/schema.rb:69
+  [1m[35m (83.0ms)[0m  [1m[35mCREATE TABLE "phones" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "number" varchar, "user_id_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:69
+  [1m[35m (83.4ms)[0m  [1m[35mCREATE  INDEX "index_phones_on_user_id_id" ON "phones" ("user_id_id")[0m
+  ↳ db/schema.rb:69
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "promises"[0m
+  ↳ db/schema.rb:80
+  [1m[35m (82.8ms)[0m  [1m[35mCREATE TABLE "promises" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "project_id" integer, "description" varchar, "min" integer, "delivery_date" date, "buyers" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:80
+  [1m[35m (84.5ms)[0m  [1m[35mCREATE  INDEX "index_promises_on_project_id" ON "promises" ("project_id")[0m
+  ↳ db/schema.rb:80
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "purchases"[0m
+  ↳ db/schema.rb:91
+  [1m[35m (65.6ms)[0m  [1m[35mCREATE TABLE "purchases" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id_id" integer, "promise_id_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:91
+  [1m[35m (116.5ms)[0m  [1m[35mCREATE  INDEX "index_purchases_on_promise_id_id" ON "purchases" ("promise_id_id")[0m
+  ↳ db/schema.rb:91
+  [1m[35m (65.9ms)[0m  [1m[35mCREATE  INDEX "index_purchases_on_user_id_id" ON "purchases" ("user_id_id")[0m
+  ↳ db/schema.rb:91
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  ↳ db/schema.rb:100
+  [1m[35m (67.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "password" varchar, "name" varchar, "description" varchar, "last_session" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "password_digest" varchar, "user_type" varchar)[0m
+  ↳ db/schema.rb:100
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "webs"[0m
+  ↳ db/schema.rb:112
+  [1m[35m (66.4ms)[0m  [1m[35mCREATE TABLE "webs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "url" varchar, "user_id_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:112
+  [1m[35m (65.8ms)[0m  [1m[35mCREATE  INDEX "index_webs_on_user_id_id" ON "webs" ("user_id_id")[0m
+  ↳ db/schema.rb:112
+  [1m[35m (71.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (50.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180526032758)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (51.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20180510214234),
+(20180510213226),
+(20180510214101),
+(20180510213847),
+(20180510213917),
+(20180510215642),
+(20180526001418),
+(20180510213951),
+(20180514041741),
+(20180510215518),
+(20180510214210),
+(20180526020738),
+(20180514042133),
+(20180510214118),
+(20180525211409),
+(20180525173349),
+(20180514233425);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (84.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-05-26 03:44:50.125574"], ["updated_at", "2018-05-26 03:44:50.125574"]]
+  ↳ db/schema.rb:13
+  [1m[35m (57.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "category_projects"[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (67.5ms)[0m  [1m[35mCREATE TABLE "category_projects" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "category" varchar, "project_id_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (76.3ms)[0m  [1m[35mCREATE  INDEX "index_category_projects_on_project_id_id" ON "category_projects" ("project_id_id")[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "comments"[0m
+  ↳ db/schema.rb:23
+  [1m[35m (74.0ms)[0m  [1m[35mCREATE TABLE "comments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "content" varchar, "user_id_id" integer, "project_id_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:23
+  [1m[35m (58.7ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_project_id_id" ON "comments" ("project_id_id")[0m
+  ↳ db/schema.rb:23
+  [1m[35m (59.5ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_user_id_id" ON "comments" ("user_id_id")[0m
+  ↳ db/schema.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "emails"[0m
+  ↳ db/schema.rb:33
+  [1m[35m (56.8ms)[0m  [1m[35mCREATE TABLE "emails" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "mail" varchar, "user_id_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:33
+  [1m[35m (57.5ms)[0m  [1m[35mCREATE  INDEX "index_emails_on_user_id_id" ON "emails" ("user_id_id")[0m
+  ↳ db/schema.rb:33
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "favorites"[0m
+  ↳ db/schema.rb:41
+  [1m[35m (59.6ms)[0m  [1m[35mCREATE TABLE "favorites" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id_id" integer, "project_id_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:41
+  [1m[35m (116.0ms)[0m  [1m[35mCREATE  INDEX "index_favorites_on_project_id_id" ON "favorites" ("project_id_id")[0m
+  ↳ db/schema.rb:41
+  [1m[35m (66.8ms)[0m  [1m[35mCREATE  INDEX "index_favorites_on_user_id_id" ON "favorites" ("user_id_id")[0m
+  ↳ db/schema.rb:41
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "follows"[0m
+  ↳ db/schema.rb:50
+  [1m[35m (65.5ms)[0m  [1m[35mCREATE TABLE "follows" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "follower_id" integer, "followed_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:50
+  [1m[35m (76.4ms)[0m  [1m[35mCREATE  INDEX "index_follows_on_followed_id" ON "follows" ("followed_id")[0m
+  ↳ db/schema.rb:50
+  [1m[35m (124.6ms)[0m  [1m[35mCREATE  INDEX "index_follows_on_follower_id" ON "follows" ("follower_id")[0m
+  ↳ db/schema.rb:50
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "funds"[0m
+  ↳ db/schema.rb:59
+  [1m[35m (75.0ms)[0m  [1m[35mCREATE TABLE "funds" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id_id" integer, "project_id_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "amount" integer)[0m
+  ↳ db/schema.rb:59
+  [1m[35m (83.5ms)[0m  [1m[35mCREATE  INDEX "index_funds_on_project_id_id" ON "funds" ("project_id_id")[0m
+  ↳ db/schema.rb:59
+  [1m[35m (97.7ms)[0m  [1m[35mCREATE  INDEX "index_funds_on_user_id_id" ON "funds" ("user_id_id")[0m
+  ↳ db/schema.rb:59
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "phones"[0m
+  ↳ db/schema.rb:69
+  [1m[35m (104.2ms)[0m  [1m[35mCREATE TABLE "phones" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "number" varchar, "user_id_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:69
+  [1m[35m (65.9ms)[0m  [1m[35mCREATE  INDEX "index_phones_on_user_id_id" ON "phones" ("user_id_id")[0m
+  ↳ db/schema.rb:69
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "promises"[0m
+  ↳ db/schema.rb:80
+  [1m[35m (65.9ms)[0m  [1m[35mCREATE TABLE "promises" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "project_id" integer, "description" varchar, "min" integer, "delivery_date" date, "buyers" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:80
+  [1m[35m (83.5ms)[0m  [1m[35mCREATE  INDEX "index_promises_on_project_id" ON "promises" ("project_id")[0m
+  ↳ db/schema.rb:80
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "purchases"[0m
+  ↳ db/schema.rb:91
+  [1m[35m (73.9ms)[0m  [1m[35mCREATE TABLE "purchases" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id_id" integer, "promise_id_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:91
+  [1m[35m (74.9ms)[0m  [1m[35mCREATE  INDEX "index_purchases_on_promise_id_id" ON "purchases" ("promise_id_id")[0m
+  ↳ db/schema.rb:91
+  [1m[35m (65.2ms)[0m  [1m[35mCREATE  INDEX "index_purchases_on_user_id_id" ON "purchases" ("user_id_id")[0m
+  ↳ db/schema.rb:91
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  ↳ db/schema.rb:100
+  [1m[35m (83.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "password" varchar, "name" varchar, "description" varchar, "last_session" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "password_digest" varchar, "user_type" varchar)[0m
+  ↳ db/schema.rb:100
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "webs"[0m
+  ↳ db/schema.rb:112
+  [1m[35m (73.8ms)[0m  [1m[35mCREATE TABLE "webs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "url" varchar, "user_id_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:112
+  [1m[35m (76.1ms)[0m  [1m[35mCREATE  INDEX "index_webs_on_user_id_id" ON "webs" ("user_id_id")[0m
+  ↳ db/schema.rb:112
+  [1m[35m (73.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (110.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180526032758)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (49.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20180510214234),
+(20180510213226),
+(20180510214101),
+(20180510213847),
+(20180510213917),
+(20180510215642),
+(20180526001418),
+(20180510213951),
+(20180514041741),
+(20180510215518),
+(20180510214210),
+(20180526020738),
+(20180514042133),
+(20180510214118),
+(20180525211409),
+(20180525173349),
+(20180514233425);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (66.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-05-26 03:44:52.496946"], ["updated_at", "2018-05-26 03:44:52.496946"]]
+  ↳ db/schema.rb:13
+  [1m[35m (45.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.1ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2018-05-26 03:44:52.545795"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (47.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
