@@ -1,6 +1,6 @@
 # The Beehive
 A Web application for the course "Web Technologies", Universidad de los Andes.
-## Members:
+#### Members:
 Ignacio Parragué,
 Gustavo Vicuña
 ## Getting started
@@ -22,4 +22,32 @@ Finally, you'll be ready to run the app in a local server:
 ```
 $ rails server
 ```
+## Progress
+#### Done:
+* Registered User
+    * Profile
+    * User Projects
+    * Project Promises
+* Admin User
+    * Users
+* Extra
+    * Feedback
+* Bootstrap
+#### On work:
+* Registered User
+    * Funded Projects
+    * Favorites
+* Extra
+    * Basic version to fund
+#### Missing:
+* Registered User
+    * Project Categories
+* Admin User
+    * Projects
+    * Categories
+* File Controller
+* Extras
+    * Mark Project as outstanding
+
+    
 
