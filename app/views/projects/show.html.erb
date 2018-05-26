@@ -36,7 +36,6 @@
   <%if @current_user.id == @user.id %>
     <%= link_to 'Add a new promise', new_project_promise_path(@user, @project) %>
   <% else %>
-    <%= link_to 'Follow the poject', controller: 'projects', action: 'new_fund' %>
     <%= link_to 'Fund this Project!', controller: 'projects', action: 'new_fund' %>
   <% end %>
 <% end %>

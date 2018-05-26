@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class User < ApplicationRecord
   before_save { self.email = email.downcase }
   validates :name,  presence: true, length: { maximum: 50 }
@@ -6,8 +8,10 @@ class User < ApplicationRecord
                     format: { with: VALID_EMAIL_REGEX },
                     uniqueness: { case_sensitive: false }
   validates :password, presence: true, length: { minimum: 6 }
-  validates :description, length: {maximum: 500}
+  validates :description, length: { maximum: 500 }
   has_secure_password
 
   has_many :projects
+  has_many :following_follows, class_name: 'Follow', foreign_key: 'following_id'
+  has_many :followers_follows, class_name: 'Follow', foreign_key: 'follower_id'
 end

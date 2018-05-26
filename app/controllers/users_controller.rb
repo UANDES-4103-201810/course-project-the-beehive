@@ -3,6 +3,16 @@
 class UsersController < ApplicationController
   before_action :set_user, only: %i[show edit update destroy]
 
+  def follow
+    @user = User.find(params[:following_id])
+    @follow = Follow.new(follower_id: params[:follower_id])
+    if @follow.save
+      redirect_to @user, notice: 'Follower added.'
+    else
+      redirect_to @user, notice: 'Following.'
+    end
+  end
+
   # GET /users
   # GET /users.json
   def index
@@ -12,6 +22,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    @follow= Follow.new
     @user = User.find(params[:id])
     @projects = @user.projects
   end

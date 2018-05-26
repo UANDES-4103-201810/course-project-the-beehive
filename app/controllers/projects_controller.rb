@@ -71,10 +71,11 @@ class ProjectsController < ApplicationController
   end
 
   def create_fund
-    @fund= Fund.new(amount: params[:amount], user: @current_user, project: @project_id)
+    @project
+    @fund= Fund.new(params[:fund])
     @project.update(actual: @project.actual + params[:q])
     respond_to do |format|
-      if
+      if 0
         format.html { redirect_to @project, notice: 'Funded successfully.' }
         format.json { render :show, status: :ok, location: @project }
       else
