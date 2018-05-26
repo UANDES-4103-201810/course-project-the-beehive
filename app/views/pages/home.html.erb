@@ -11,12 +11,12 @@
 </div>
 
 <div>
-  <p class='home'> Hosted Projects </a>
-    <% @projects = Project.limit(5).order("RANDOM()") %>
-    <% @projects.each do |project| %>
-    <h2>
-      <%= link_to project.name , project_path(project) %>:
-      <%= project.description %>
-    </h2>
-  <% end %>
+    <p class='home'> Hosted Projects </p>
+      <% @projects = Project.limit(5).order("RANDOM()") %>
+      <% @projects.each do |project| %>
+      <h2>
+        <%= link_to project.name , project_path(project) %>:
+        <%= project.description %>
+      </h2>
+    <% end %>
 </div>

@@ -8,8 +8,6 @@ class CreateProjects < ActiveRecord::Migration[5.2]
       t.integer :actual
       t.date :date_limit
       t.integer :funders
-
-      t.timestamps
     end
   end
 end

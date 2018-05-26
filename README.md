@@ -39,13 +39,11 @@ $ rails server
 * Registered User
     * Funded Projects
     * Favorites
+    * Project Categories
 * Extra
     * Basic version to fund
-#### Missing:
-* Registered User
-    * Project Categories
-* Admin User
     * Categories
+#### Missing:
 * File Controller
 
     

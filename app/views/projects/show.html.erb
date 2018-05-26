@@ -35,6 +35,7 @@
   <%end %>
   <%if @current_user.id == @user.id %>
     <%= link_to 'Add a new promise', new_project_promise_path(@user, @project) %>
+    <%= link_to 'Destroy', @project, method: :delete, data: { confirm: 'Are you sure?' } %>
   <% else %>
     <%= form_tag(controller: 'projects', action: 'favorite') %>
     <%= hidden_field_tag :favorite_user, @current_user %>

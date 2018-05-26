@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get '/users/:id/settings', to: 'users#edit'
 
   get '/projects', to: 'projects#index'
+  delete '/project/:id', to: 'projects#destroy'
 
   get '/projects/:id/fund', to: 'projects#new_fund'
   post '/projects/:id/fund', to: 'projects#create_fund'
