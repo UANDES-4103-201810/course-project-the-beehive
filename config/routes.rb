@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   post '/projects/:id/favorite', to: 'projects#favorite'
 
   post '/users/:id/projects/new', to: 'projects#create'
-  post '/projects/:project_id/promises/new', to: 'promises#create'
+  post '/projects/:id/promises/new', to: 'promises#create'
 
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'

@@ -14,7 +14,7 @@ class PromisesController < ApplicationController
 
   # GET /promises/new
   def new
-    @project ||= Project.find_by(id: params[:project_id])
+    @project = Project.find(params[:project_id])
     @promise = Promise.new
   end
 
@@ -54,9 +54,10 @@ class PromisesController < ApplicationController
   # DELETE /promises/1
   # DELETE /promises/1.json
   def destroy
+    @project= Project.find(@promise.project_id)
     @promise.destroy
     respond_to do |format|
-      format.html { redirect_to promises_url, notice: 'Promise was successfully destroyed.' }
+      format.html { redirect_to @project, notice: 'Promise was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
