@@ -33,6 +33,7 @@ $ rails server
     * Projects
 * Extra
     * Feedback
+    * Mark as outstanding
 * Bootstrap
 #### On work:
 * Registered User
@@ -46,8 +47,6 @@ $ rails server
 * Admin User
     * Categories
 * File Controller
-* Extras
-    * Mark Project as outstanding
 
     
 
