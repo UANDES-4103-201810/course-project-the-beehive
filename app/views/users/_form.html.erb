@@ -26,6 +26,9 @@
 
       <%= form.label :description %>
       <%= form.text_field :description, class: 'form-control' %>
+
+      <%= form.label :avatar %> 
+      <%= form.file_field :avatar %>
     </div>
 
     <%= form.submit "Update", class: 'btn btn-primary' %>

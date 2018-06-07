@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
+
+gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 ruby '2.4.1'
 gem 'bcrypt',         '3.1.11'
 gem 'bootstrap-sass', '~> 3.2.0'
