@@ -35,6 +35,8 @@ $ rails server
     * Feedback
     * Mark as outstanding
 * Bootstrap
+* File Controller
+
 #### On work:
 * Registered User
     * Funded Projects
@@ -43,8 +45,15 @@ $ rails server
 * Extra
     * Basic version to fund
     * Categories
+
 #### Missing:
-* File Controller
-
+* System Access
+* User profile
+    * Redcarpet
+* Funding
+    * Action Mailer
+* Searching
+* Authorization
     
-
+#### Bugs:
+* Form
