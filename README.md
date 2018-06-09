@@ -45,11 +45,11 @@ $ rails server
 * Extra
     * Basic version to fund
     * Categories
-
-#### Missing:
-* System Access
 * User profile
     * Redcarpet
+    
+#### Missing:
+* System Access
 * Funding
     * Action Mailer
 * Searching
