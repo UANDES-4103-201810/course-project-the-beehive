@@ -54138,3 +54138,146 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 156ms (Views: 109.5ms | ActiveRecord: 11.8ms)
 
 
+Started GET "/users/1" for 127.0.0.1 at 2018-06-09 12:42:01 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/gus/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:28
+  Rendered users/show.html.erb within layouts/application (177.4ms)
+  Rendered layouts/_rails_default.html.erb (56.5ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_sidenav.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 294ms (Views: 243.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2018-06-09 12:42:03 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (24.9ms)
+  Rendered users/edit.html.erb within layouts/application (25.8ms)
+  Rendered layouts/_rails_default.html.erb (29.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_sidenav.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 62ms (Views: 61.1ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/users/1" for 127.0.0.1 at 2018-06-09 12:42:12 -0400
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UVEMWIVPPIAF4RmFXy6ePdrIgidalUpDEqjffT2wQNW8srXEbSXDn8taYUzrk+TwQZXonHFdC0riAPNClTmAjA==", "user"=>{"name"=>"Gustavo", "email"=>"gpvicuna@miuandes.cl", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "description"=>"", "avatar"=>#<ActionDispatch::Http::UploadedFile:0x0055fc5a6c54b0 @tempfile=#<Tempfile:/tmp/RackMultipart20180609-4017-1nlvygw.png>, @original_filename="napstablook.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[avatar]\"; filename=\"napstablook.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Update", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:58
+[paperclip] Trying to link /tmp/RackMultipart20180609-4017-1nlvygw.png to /tmp/ea1e106feab90d9d12bad7353c2af8ef20180609-4017-14a5ubz.png
+[paperclip] Trying to link /tmp/ea1e106feab90d9d12bad7353c2af8ef20180609-4017-14a5ubz.png to /tmp/ea1e106feab90d9d12bad7353c2af8ef20180609-4017-924uot.png
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/tmp/ea1e106feab90d9d12bad7353c2af8ef20180609-4017-924uot.png'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/tmp/ea1e106feab90d9d12bad7353c2af8ef20180609-4017-14a5ubz.png[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/tmp/ea1e106feab90d9d12bad7353c2af8ef20180609-4017-14a5ubz.png[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/tmp/ea1e106feab90d9d12bad7353c2af8ef20180609-4017-14a5ubz.png[0]' -auto-orient -resize "300x300>" '/tmp/ace9608fc512071509d127415e92206a20180609-4017-fof7yk'
+[paperclip] Trying to link /tmp/ace9608fc512071509d127415e92206a20180609-4017-fof7yk to /tmp/9062c050df3ff54dc73ece26d44aca9320180609-4017-hj86s4
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/tmp/ea1e106feab90d9d12bad7353c2af8ef20180609-4017-14a5ubz.png[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/tmp/ea1e106feab90d9d12bad7353c2af8ef20180609-4017-14a5ubz.png[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/tmp/ea1e106feab90d9d12bad7353c2af8ef20180609-4017-14a5ubz.png[0]' -auto-orient -resize "100x100>" '/tmp/ace9608fc512071509d127415e92206a20180609-4017-1aq83df'
+[paperclip] Trying to link /tmp/ace9608fc512071509d127415e92206a20180609-4017-1aq83df to /tmp/947f9884f9ac80c6f87364bcf88432cb20180609-4017-1x0lh5o
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["email", "gpvicuna@miuandes.cl"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:58
+[paperclip] Trying to link /tmp/ea1e106feab90d9d12bad7353c2af8ef20180609-4017-14a5ubz.png to /tmp/ea1e106feab90d9d12bad7353c2af8ef20180609-4017-1bdtav9.png
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/tmp/ea1e106feab90d9d12bad7353c2af8ef20180609-4017-1bdtav9.png'
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "password_digest" = ?, "description" = ?, "avatar_file_name" = ?, "avatar_content_type" = ?, "avatar_file_size" = ?, "avatar_updated_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["password_digest", "$2a$10$3rsFtqKGyGj4CNSTQSY2iusivFMe9My8jPZuwnvCKTOLR4d9mtI/m"], ["description", ""], ["avatar_file_name", "napstablook.png"], ["avatar_content_type", "image/png"], ["avatar_file_size", 443], ["avatar_updated_at", "2018-06-09 16:42:12.553317"], ["updated_at", "2018-06-09 16:42:12.916093"], ["id", 1]]
+  ↳ app/controllers/users_controller.rb:58
+  [1m[35m (68.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:58
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 520ms (ActiveRecord: 69.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-06-09 12:42:13 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:28
+  Rendered users/show.html.erb within layouts/application (8.1ms)
+  Rendered layouts/_rails_default.html.erb (51.7ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_sidenav.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 71ms (Views: 65.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2018-06-09 12:42:36 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (5.8ms)
+  Rendered users/edit.html.erb within layouts/application (7.6ms)
+  Rendered layouts/_rails_default.html.erb (56.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_sidenav.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 74ms (Views: 71.6ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/users/1" for 127.0.0.1 at 2018-06-09 12:42:44 -0400
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O8PBPPhA0GGM0YlL220MYUPlJVC1xTZue7GBc3UMde3WIHigECovfkJq8YJv0Has2LhP654Nd2eLGa1M3YW1tA==", "user"=>{"name"=>"Gustavo", "email"=>"gpvicuna@miuandes.cl", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "description"=>"Soy una persona que le gusta los proyectos"}, "commit"=>"Update", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:58
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["email", "gpvicuna@miuandes.cl"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:58
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "password_digest" = ?, "description" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["password_digest", "$2a$10$1mDcIV7xEjWgtiM.He2f6Op9Vi2sNMTphjlpLpXmvqK.H.jhF0EPS"], ["description", "Soy una persona que le gusta los proyectos"], ["updated_at", "2018-06-09 16:42:45.005676"], ["id", 1]]
+  ↳ app/controllers/users_controller.rb:58
+  [1m[35m (74.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:58
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 141ms (ActiveRecord: 75.3ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-06-09 12:42:45 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:28
+  Rendered users/show.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_rails_default.html.erb (75.5ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_sidenav.html.erb (2.7ms)
+  Rendered layouts/_footer.html.erb (1.6ms)
+Completed 200 OK in 96ms (Views: 92.1ms | ActiveRecord: 0.3ms)
+
+

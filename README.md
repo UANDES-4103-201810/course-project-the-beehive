@@ -56,4 +56,3 @@ $ rails server
 * Authorization
     
 #### Bugs:
-* Form
