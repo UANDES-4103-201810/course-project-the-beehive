@@ -19,7 +19,9 @@
       <% end %>
     </section>
   </aside>
-  <%= raw markdown(@user.description) %>
+  <% if @user.description!=nil %>
+    <%= raw markdown(@user.description) %>
+  <% end %>
 </div>
 <div class="row">
   <aside class="col-md-8">

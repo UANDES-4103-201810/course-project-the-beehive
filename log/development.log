@@ -55477,3 +55477,474 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 68ms (Views: 64.2ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/users/1" for 127.0.0.1 at 2018-06-11 13:11:55 -0400
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/gus/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:27
+  Rendered users/show.html.erb within layouts/application (21.1ms)
+  Rendered layouts/_rails_default.html.erb (190.8ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_sidenav.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 278ms (Views: 222.4ms | ActiveRecord: 2.5ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2018-06-11 13:11:57 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"63OyOqxD3Vqy9a5zviDPoGE5X/u2bt+k8KhTln/3Imya8wW/XBkNs/ejIJ98qLg8XNxF6Jdd2bYuaS0TX267Pw=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-11 13:11:57 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from _app_views_pages_home_html_erb__721047871431211859_70241791679460 at /home/gus/Desktop/uandes/web/Assignment/The Beehive/course-project-the-beehive/app/views/pages/home.html.erb:15)
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/pages/home.html.erb:16
+  Rendered pages/home.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_rails_default.html.erb (56.4ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered layouts/_header.html.erb (1.4ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered layouts/_sidenav.html.erb (5.2ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 77ms (Views: 75.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2018-06-11 13:11:59 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (30.5ms)
+  Rendered layouts/_rails_default.html.erb (62.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered layouts/_header.html.erb (1.7ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered layouts/_sidenav.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 104ms (Views: 101.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/register" for 127.0.0.1 at 2018-06-11 13:12:08 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SPosmOOcsNAcSqFIdK59THJqNBSXf5bjY4CEuYikaDO+TKZfjlBC4WUDraILy0lVlWWvVsOjFlkrRr/UkkpJzg==", "user"=>{"name"=>"Momo", "email"=>"soymomo@email.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user_type"=>"regular"}, "commit"=>"Create my account"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:44
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "soymomo@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "created_at", "updated_at", "password_digest", "user_type") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "soymomo@email.com"], ["name", "Momo"], ["created_at", "2018-06-11 17:12:08.080863"], ["updated_at", "2018-06-11 17:12:08.080863"], ["password_digest", "$2a$10$Ck6lVkeOOEzdFOH.GbqMse32xG9hMLH2qU41smxMvXRNBZSG8BKXm"], ["user_type", "regular"]]
+  ↳ app/controllers/users_controller.rb:44
+  [1m[35m (94.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:44
+Redirected to http://localhost:3000/home
+Completed 302 Found in 156ms (ActiveRecord: 95.5ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-06-11 13:12:08 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from _app_views_pages_home_html_erb__721047871431211859_70241808092340 at /home/gus/Desktop/uandes/web/Assignment/The Beehive/course-project-the-beehive/app/views/pages/home.html.erb:15)
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/pages/home.html.erb:16
+  Rendered pages/home.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_rails_default.html.erb (43.5ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered layouts/_header.html.erb (1.0ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered layouts/_sidenav.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 52ms (Views: 50.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-06-11 13:12:10 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_rails_default.html.erb (40.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered layouts/_header.html.erb (1.4ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered layouts/_sidenav.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 66ms (Views: 50.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-06-11 13:12:14 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"huK5QRxp79y2pqmUBI5GxhID6uGsJp9E4x0f+FWibeF/XCRNTgErisnTd4XOmDGACymi8bK5EEtnic4/t699DQ==", "session"=>{"email"=>"soymomo@momo.cl", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "soymomo@momo.cl"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9
+Redirected to http://localhost:3000/login
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-06-11 13:12:14 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_rails_default.html.erb (50.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered layouts/_header.html.erb (1.2ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered layouts/_sidenav.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 63ms (Views: 61.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-06-11 13:12:24 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EyJkii4j7TuzvaSBALLrM/j/5ND2ABKEB1Zo8IhRzsViotMP3nk90vbrKm3COpyvxRr+w9czFJbZlxZ1qMhXlg==", "session"=>{"email"=>"soymomo@momo.cl", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "soymomo@momo.cl"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-06-11 13:12:24 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_rails_default.html.erb (43.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered layouts/_header.html.erb (1.4ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered layouts/_sidenav.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 54ms (Views: 52.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-06-11 13:12:45 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7fF0dfWyfAEE6Mjv4R1Igd+Yjf5mhZ64/RXFkqTGOmCcccPwBeis6EG+RgMjlT8d4n2X7Ue2mKoj1LsXhF+jMw==", "session"=>{"email"=>"gpvicuna@miuandes.cl", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gpvicuna@miuandes.cl"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 57ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-06-11 13:12:45 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:27
+  Rendered users/show.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_rails_default.html.erb (50.8ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_sidenav.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 61ms (Views: 59.3ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2018-06-11 13:12:57 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"+9exeg/wyIJ82rJ6tJYEjnCePRWuH2Mz+OtkJ1C49nqKVwb//6oYazmMPJZ2HnMSTXsnBo8sZSEmKhqicCFvKQ=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-11 13:12:57 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from _app_views_pages_home_html_erb__721047871431211859_70241877424880 at /home/gus/Desktop/uandes/web/Assignment/The Beehive/course-project-the-beehive/app/views/pages/home.html.erb:15)
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/pages/home.html.erb:16
+  Rendered pages/home.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_rails_default.html.erb (44.4ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered layouts/_header.html.erb (1.1ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered layouts/_sidenav.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 55ms (Views: 53.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2018-06-11 13:12:59 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.8ms)
+  Rendered users/new.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_rails_default.html.erb (46.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered layouts/_header.html.erb (1.2ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered layouts/_sidenav.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 63ms (Views: 61.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/register" for 127.0.0.1 at 2018-06-11 13:13:08 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RhOj3R5IeFxQAcqwq+QPUUZl5STV7h4X/bmhD7YZWFewpSkac4SKbSlIxlrUgTtIoWp+ZoEynq21f5pirPd5qg==", "user"=>{"name"=>"Momo", "email"=>"soymomo@email.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user_type"=>"regular"}, "commit"=>"Create my account"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:44
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "soymomo@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:44
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_rails_default.html.erb (43.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered layouts/_header.html.erb (2.8ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered layouts/_sidenav.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 117ms (Views: 55.3ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/register" for 127.0.0.1 at 2018-06-11 13:13:25 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WjwivyRVmFKgNqST5H70YpBYiFd7qltbgkNh1kBCYOArvJU61A9Iu+VgKn8m9oP+rb2SRFqZXUlcgh9TYNv5sw==", "user"=>{"name"=>"Momo", "email"=>"soymomo@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user_type"=>"regular"}, "commit"=>"Create my account"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:44
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "soymomo@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44
+  [1m[36mUser Create (1.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "created_at", "updated_at", "password_digest", "user_type") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "soymomo@gmail.com"], ["name", "Momo"], ["created_at", "2018-06-11 17:13:25.498654"], ["updated_at", "2018-06-11 17:13:25.498654"], ["password_digest", "$2a$10$riyIEmXRA/.hoEcxhouUGOfiB5CRlpYr7Gsv2f4eyMxYAO4dWunP6"], ["user_type", "regular"]]
+  ↳ app/controllers/users_controller.rb:44
+  [1m[35m (61.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:44
+Redirected to http://localhost:3000/home
+Completed 302 Found in 123ms (ActiveRecord: 62.9ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-06-11 13:13:25 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from _app_views_pages_home_html_erb__721047871431211859_70241793134120 at /home/gus/Desktop/uandes/web/Assignment/The Beehive/course-project-the-beehive/app/views/pages/home.html.erb:15)
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/pages/home.html.erb:16
+  Rendered pages/home.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_rails_default.html.erb (43.2ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered layouts/_header.html.erb (4.0ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered layouts/_sidenav.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 61ms (Views: 59.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-06-11 13:13:27 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_rails_default.html.erb (49.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered layouts/_header.html.erb (1.2ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered layouts/_sidenav.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 60ms (Views: 58.0ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-06-11 13:13:46 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ExJ+4rs6/WcKVF03OZLwtRJOWyUm1ID46E/8KW9gxS3qrOPu6VI5MXUhgybzhIfzC2QTNThLD/ds2y3ujW3VwQ==", "session"=>{"email"=>"soymomo@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "soymomo@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 58ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2018-06-11 13:13:46 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered users/show.html.erb within layouts/application (12.5ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (wrong argument type nil (expected String)):
+    19:       <% end %>
+    20:     </section>
+    21:   </aside>
+    22:   <%= raw markdown(@user.description) %>
+    23: </div>
+    24: <div class="row">
+    25:   <aside class="col-md-8">
+  
+app/helpers/users_helper.rb:4:in `render'
+app/helpers/users_helper.rb:4:in `markdown'
+app/views/users/show.html.erb:22:in `_app_views_users_show_html_erb__2267837936167994920_70241796575300'
+Started GET "/users/4" for 127.0.0.1 at 2018-06-11 13:15:52 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."user_id" = ? LIMIT ?[0m  [["user_id", 4], ["LIMIT", 11]]
+  ↳ /home/gus/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."user_id" = ? LIMIT ?[0m  [["user_id", 4], ["LIMIT", 11]]
+  ↳ /home/gus/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."user_id" = ? LIMIT ?[0m  [["user_id", 4], ["LIMIT", 11]]
+  ↳ /home/gus/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."user_id" = ? LIMIT ?[0m  [["user_id", 4], ["LIMIT", 11]]
+  ↳ /home/gus/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  Rendered users/show.html.erb within layouts/application (147.0ms)
+Completed 500 Internal Server Error in 150ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `null' for #<#<Class:0x005647329787e8>:0x007fc4e4171960>):
+    19:       <% end %>
+    20:     </section>
+    21:   </aside>
+    22:   <% if @user.description!=null %>
+    23:     <%= raw markdown(@user.description) %>
+    24:     <% end %>
+    25: </div>
+  
+app/views/users/show.html.erb:22:in `_app_views_users_show_html_erb__2267837936167994920_70241808519660'
+Started GET "/users/4" for 127.0.0.1 at 2018-06-11 13:16:01 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mProject Load (0.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/views/users/show.html.erb:29
+  Rendered users/show.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_rails_default.html.erb (48.7ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_sidenav.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 60ms (Views: 58.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2018-06-11 13:17:01 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/gus/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/views/users/show.html.erb:29
+  Rendered users/show.html.erb within layouts/application (157.7ms)
+  Rendered layouts/_rails_default.html.erb (67.3ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_sidenav.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 270ms (Views: 233.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/users/4/projects/new" for 127.0.0.1 at 2018-06-11 13:17:05 -0400
+Processing by ProjectsController#new as HTML
+  Parameters: {"user_id"=>"4"}
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered projects/_form.html.erb (24.9ms)
+  Rendered projects/new.html.erb within layouts/application (26.0ms)
+  Rendered layouts/_rails_default.html.erb (70.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_sidenav.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 141ms (Views: 102.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/4/projects/new" for 127.0.0.1 at 2018-06-11 13:18:37 -0400
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gjDliWyvlSuyBJ4wyiKyD5kanXblvPwuW4tFb/J1+cetZ0YvR0OP8N9gLD34ev+v+GSV2uAk+JEFAkJnNPt2AA==", "project"=>{"name"=>"Nuevo proyecto", "description"=>"# Nuevo Projecto\r\nEste es un nuevo projecto que sera muy importante. \r\nComo ven aca:\r\n## Parte 1\r\n### 1.1\r\nHola\r\n### 1.2\r\nChao\r\n## Parte 2\r\nNada mas que decir.", "goal"=>"40", "date_limit(1i)"=>"2019", "date_limit(2i)"=>"6", "date_limit(3i)"=>"11", "funders"=>"0", "actual"=>"0", "user_id"=>"4"}, "commit"=>"Create", "id"=>"4"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/projects_controller.rb:45
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:45
+  [1m[36mProject Create (0.2ms)[0m  [1m[32mINSERT INTO "projects" ("name", "user_id", "description", "goal", "actual", "date_limit", "funders") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Nuevo proyecto"], ["user_id", 4], ["description", "# Nuevo Projecto\r\nEste es un nuevo projecto que sera muy importante. \r\nComo ven aca:\r\n## Parte 1\r\n### 1.1\r\nHola\r\n### 1.2\r\nChao\r\n## Parte 2\r\nNada mas que decir."], ["goal", 40], ["actual", 0], ["date_limit", "2019-06-11"], ["funders", 0]]
+  ↳ app/controllers/projects_controller.rb:45
+  [1m[35m (102.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/projects_controller.rb:45
+Redirected to http://localhost:3000/projects/3
+Completed 302 Found in 111ms (ActiveRecord: 102.8ms)
+
+
+Started GET "/projects/3" for 127.0.0.1 at 2018-06-11 13:18:37 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:103
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:26
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:27
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mPromise Load (0.1ms)[0m  [1m[34mSELECT "promises".* FROM "promises" WHERE "promises"."project_id" = ?[0m  [["project_id", 3]]
+  ↳ app/views/projects/show.html.erb:52
+  Rendered projects/show.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_rails_default.html.erb (37.1ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_sidenav.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 54ms (Views: 46.3ms | ActiveRecord: 1.0ms)
+
+
