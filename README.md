@@ -39,11 +39,11 @@ $ rails server
 * User profile
     * Redcarpet
 * Authorization?
+* Searching
 
 #### On work:
 * Registered User
     * Funded Projects
-    * Favorites
     * Project Categories
 * Extra
     * Basic version to fund
@@ -53,6 +53,5 @@ $ rails server
 * System Access
 * Funding
     * Action Mailer
-* Searching
     
 #### Bugs:
