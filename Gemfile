@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
+gem 'cancancan', '~> 2.0'
 gem 'redcarpet'
 gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 ruby '2.4.1'

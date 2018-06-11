@@ -38,6 +38,7 @@ $ rails server
 * File Controller
 * User profile
     * Redcarpet
+* Authorization?
 
 #### On work:
 * Registered User
@@ -53,6 +54,5 @@ $ rails server
 * Funding
     * Action Mailer
 * Searching
-* Authorization
     
 #### Bugs:
