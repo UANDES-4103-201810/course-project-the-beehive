@@ -36,6 +36,8 @@ $ rails server
     * Mark as outstanding
 * Bootstrap
 * File Controller
+* User profile
+    * Redcarpet
 
 #### On work:
 * Registered User
@@ -45,8 +47,6 @@ $ rails server
 * Extra
     * Basic version to fund
     * Categories
-* User profile
-    * Redcarpet
     
 #### Missing:
 * System Access

@@ -3,13 +3,10 @@
 </h1>
 
 <h2>
-  <%= link_to @user.name, @user%>
+  by <%= link_to @user.name, @user%>
 </h2>
 
-<h3>
-  <strong>Description:</strong>
-  <%= @project.description %>
-</h3>
+<%= raw markdown(@project.description) %>
 
 <progress max=<%= @project.goal %> value=<%= @project.actual %>> <%= @project.actual*100/@project.goal %> %</progress>
 <p>

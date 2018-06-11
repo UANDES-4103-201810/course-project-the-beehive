@@ -2,15 +2,10 @@
 <div class="row">
   <aside class="col-md-4">
     <section class="user_info">
-      <h1>
+      <h3>
         <%= image_tag @user.avatar.url, alt: 'Avatar'%>
         <%= @user.name %>
-      </h1>
-      <h2>
-        <%= markdown(@user.description) %>
-      </h2>
-
-
+      </h3>
       <% if logged_in? %>
         <% if @current_user.id == @user.id %>
           <%= link_to 'Edit your account', edit_user_path(@user) %>
@@ -22,15 +17,17 @@
           <%= submit_tag "Follow", class: "btn" %>
         <% end %>
       <% end %>
-
     </section>
+  </aside>
+  <%= raw markdown(@user.description) %>
+</div>
+<div class="row">
+  <aside class="col-md-8">
     <h3> Projects: </h3>
     <% @projects.each do |project| %>
       <h2>
-        <%= link_to project.name , project_path(project) %>:
-        <%= project.description %>
+        <%= link_to project.name , project_path(project) %>
       </h2>
-
     <% end %>
   </aside>
 </div>
