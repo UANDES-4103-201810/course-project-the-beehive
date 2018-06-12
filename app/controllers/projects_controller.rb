@@ -26,15 +26,19 @@ class ProjectsController < ApplicationController
     @project = Project.find(params[:id])
     @user ||= User.find_by(id: @project.user_id)
     @promises = Promise.where(project_id: @project.id)
+    @category = Category.find_by(id: @project.category_id)
   end
 
   # GET /projects/new
   def new
     @project = Project.new
+    @categories = Category.all
   end
 
   # GET /projects/1/edit
-  def edit; end
+  def edit
+    @categories = Category.all
+  end
 
   # POST /projects
   # POST /projects.json
@@ -105,6 +109,6 @@ class ProjectsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def project_params
-    params.require(:project).permit(:name, :user_id, :description, :goal, :actual, :date_limit, :funders)
+    params.require(:project).permit(:name, :user_id, :description, :goal, :actual, :date_limit, :funders, :category_id)
   end
 end

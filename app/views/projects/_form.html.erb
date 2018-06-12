@@ -17,6 +17,12 @@
         <%= form.label :date_limit %>
         <%= form.date_select :date_limit %>
 
+        <%= form.label 'Category:' %>
+        <% @categories.each do |category| %>
+          <%= form.label category.name %>
+          <%= form.radio_button :category_id, category.id %>
+        <%end%>
+
         <%= form.hidden_field :funders, value: 0 %>
         <%= form.hidden_field :actual, value: 0 %>
         <%= form.hidden_field :user_id, value: @current_user.id %>

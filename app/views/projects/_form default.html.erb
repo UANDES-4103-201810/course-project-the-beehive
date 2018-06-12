@@ -24,6 +24,11 @@
 
     <%= form.label :date_limit %>
     <%= form.date_select :date_limit %>
+
+    <% @categories.each do |category| %>
+      <%= form.label category.name %>
+      <%= form.radio_button :category_id, category.id %>
+    <%end%>
       <% if @current_user=='admin' %>
         <%= check_box(:outstanding, 'Outstanding') %>
       <% end %>

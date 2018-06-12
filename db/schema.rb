@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_07_023640) do
+ActiveRecord::Schema.define(version: 2018_06_12_005548) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -90,6 +90,8 @@ ActiveRecord::Schema.define(version: 2018_06_07_023640) do
     t.date "date_limit"
     t.integer "funders"
     t.boolean "outstanding"
+    t.integer "category_id"
+    t.index ["category_id"], name: "index_projects_on_category_id"
     t.index ["user_id"], name: "index_projects_on_user_id"
   end
 
