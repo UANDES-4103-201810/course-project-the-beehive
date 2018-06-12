@@ -18,9 +18,11 @@
         <%= form.date_select :date_limit %>
 
         <%= form.label 'Category:' %>
+        <% if @categories != nil %>
         <% @categories.each do |category| %>
           <%= form.label category.name %>
           <%= form.radio_button :category_id, category.id %>
+        <%end%>
         <%end%>
 
         <%= form.hidden_field :funders, value: 0 %>
