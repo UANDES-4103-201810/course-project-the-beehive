@@ -25,7 +25,7 @@
     <%= form.label :date_limit %>
     <%= form.date_select :date_limit %>
 
-    <% if @categories != nil %
+    <% if @categories != nil %>
     <% @categories.each do |category| %>
       <%= form.label category.name %>
       <%= form.radio_button :category_id, category.id %>
