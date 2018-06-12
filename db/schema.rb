@@ -19,10 +19,11 @@ ActiveRecord::Schema.define(version: 2018_06_07_023640) do
   end
 
   create_table "category_projects", force: :cascade do |t|
-    t.string "category"
+    t.integer "category_id_id"
     t.integer "project_id_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["category_id_id"], name: "index_category_projects_on_category_id_id"
     t.index ["project_id_id"], name: "index_category_projects_on_project_id_id"
   end
 
@@ -55,11 +56,11 @@ ActiveRecord::Schema.define(version: 2018_06_07_023640) do
 
   create_table "follows", force: :cascade do |t|
     t.integer "follower_id"
-    t.integer "followed_id"
+    t.integer "following_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["followed_id"], name: "index_follows_on_followed_id"
     t.index ["follower_id"], name: "index_follows_on_follower_id"
+    t.index ["following_id"], name: "index_follows_on_following_id"
   end
 
   create_table "funds", force: :cascade do |t|
@@ -88,6 +89,7 @@ ActiveRecord::Schema.define(version: 2018_06_07_023640) do
     t.integer "actual"
     t.date "date_limit"
     t.integer "funders"
+    t.boolean "outstanding"
     t.index ["user_id"], name: "index_projects_on_user_id"
   end
 

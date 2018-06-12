@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  get 'fund/new'
+  get 'fund/create'
   get 'sessions/new'
   get '/home', to: 'pages#home'
   get '/about', to: 'pages#about'
@@ -11,8 +13,8 @@ Rails.application.routes.draw do
   get '/projects', to: 'projects#index'
   delete '/project/:id', to: 'projects#destroy'
 
-  get '/projects/:id/fund', to: 'projects#new_fund'
-  post '/projects/:id/fund', to: 'projects#create_fund'
+  get '/projects/:id/fund', to: 'funds#new'
+  post '/projects/:id/fund', to: 'funds#create'
 
   post '/users/:id/follow', to: 'users#follow'
   post '/projects/:id/favorite', to: 'projects#favorite'

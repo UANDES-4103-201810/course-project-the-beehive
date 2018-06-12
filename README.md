@@ -38,7 +38,7 @@ $ rails server
 * File Controller
 * User profile
     * Redcarpet
-* Authorization?
+* Authorization
 * Searching
 
 #### On work:
