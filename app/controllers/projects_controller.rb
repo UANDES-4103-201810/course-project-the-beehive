@@ -27,6 +27,8 @@ class ProjectsController < ApplicationController
     @user ||= User.find_by(id: @project.user_id)
     @promises = Promise.where(project_id: @project.id)
     @category = Category.find_by(id: @project.category_id)
+    @funders = Fund.where(project_id: @project.id).count
+    @amount = Fund.where(project_id: @project.id).sum(:amount)
   end
 
   # GET /projects/new

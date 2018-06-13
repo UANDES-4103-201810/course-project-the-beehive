@@ -6,7 +6,8 @@ class FundsController < ApplicationController
   def create
   	@fund = Fund.new(fund_params)
   	@project= Project.find(params[:id])
-
+    @project.funders += 1
+    @project.save
     respond_to do |format|
       if @fund.save
         format.html { redirect_to @project, notice: 'Fund successfully.' }

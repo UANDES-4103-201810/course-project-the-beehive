@@ -10,10 +10,10 @@
     <%= raw markdown(@project.description) %>
 <% end %>
 
-<progress max=<%= @project.goal %> value=<%= @project.actual %>> <%= @project.actual*100/@project.goal %> %</progress>
+<progress max=<%= @project.goal %> value=<%= @amount %>> <%= @project.actual*100/@project.goal %> %</progress>
 <p>
   <strong>Actual:</strong>
-  <%= @project.actual %>
+  <%= @amount %>
   <strong>Goal:</strong>
   <%= @project.goal %>
 </p>
@@ -32,7 +32,7 @@
 
 <p>
   <strong>Funders:</strong>
-  <%= @project.funders %>
+  <%= @funders %>
 </p>
 
 <% if logged_in? %>
@@ -44,8 +44,8 @@
     <%= link_to 'Add a new promise', new_project_promise_path(@project) %>
   <% else %>
     <%= form_tag(controller: 'projects', action: 'favorite') %>
-    <%= hidden_field_tag :favorite_user, @current_user %>
-    <%= hidden_field_tag :favorite_project, @project %>
+    <%= hidden_field_tag :favorite_user, @current_user.id %>
+    <%= hidden_field_tag :favorite_project, @project.id %>
     <%= submit_tag "Add to favorites", class: "btn" %>
 
     <%= link_to 'Fund this Project!', "/projects/"+@project.id.to_s+"/fund" %>
