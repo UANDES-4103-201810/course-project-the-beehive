@@ -61233,3 +61233,344 @@ Processing by ProjectsController#show as HTML
 Completed 200 OK in 130ms (Views: 125.2ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-06-12 20:31:24 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/web/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from _app_views_pages_home_html_erb___3828347338625582432_70229262673160 at /home/web/Desktop/Untitled Folder 2/course-project-the-beehive/app/views/pages/home.html.erb:15)
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/pages/home.html.erb:16
+  Rendered pages/home.html.erb within layouts/application (52.2ms)
+  Rendered layouts/_rails_default.html.erb (420.1ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_sidenav.html.erb (3.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 498ms (Views: 486.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2018-06-12 20:31:27 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:29
+  Rendered users/show.html.erb within layouts/application (9.6ms)
+  Rendered layouts/_rails_default.html.erb (147.8ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_sidenav.html.erb (5.3ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 195ms (Views: 174.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/users/2/projects/new" for 127.0.0.1 at 2018-06-12 20:31:28 -0400
+Processing by ProjectsController#new as HTML
+  Parameters: {"user_id"=>"2"}
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/projects/_form.html.erb:22
+  Rendered projects/_form.html.erb (186.7ms)
+  Rendered projects/new.html.erb within layouts/application (189.6ms)
+  Rendered layouts/_rails_default.html.erb (88.7ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_sidenav.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 302ms (Views: 294.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-12 20:31:31 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from _app_views_pages_home_html_erb___3828347338625582432_70229275593840 at /home/web/Desktop/Untitled Folder 2/course-project-the-beehive/app/views/pages/home.html.erb:15)
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/pages/home.html.erb:16
+  Rendered pages/home.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_rails_default.html.erb (185.4ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_sidenav.html.erb (14.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 220ms (Views: 218.1ms | ActiveRecord: 0.6ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to RemoveErrorsFromFunds (20180613003624)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20180613003624_remove_errors_from_funds.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "afunds" ("id" integer NOT NULL PRIMARY KEY, "user_id_id" integer DEFAULT NULL, "project_id_id" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "amount" integer DEFAULT NULL)[0m
+  ↳ db/migrate/20180613003624_remove_errors_from_funds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_afunds_on_project_id_id" ON "afunds" ("project_id_id")[0m
+  ↳ db/migrate/20180613003624_remove_errors_from_funds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_afunds_on_user_id_id" ON "afunds" ("user_id_id")[0m
+  ↳ db/migrate/20180613003624_remove_errors_from_funds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "afunds" ("id","user_id_id","project_id_id","created_at","updated_at","amount")
+                     SELECT "id","user_id_id","project_id_id","created_at","updated_at","amount" FROM "funds"[0m
+  ↳ db/migrate/20180613003624_remove_errors_from_funds.rb:3
+  [1m[35m (0.9ms)[0m  [1m[35mDROP TABLE "funds"[0m
+  ↳ db/migrate/20180613003624_remove_errors_from_funds.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "funds" ("id" integer NOT NULL PRIMARY KEY, "user_id_id" integer DEFAULT NULL, "project_id_id" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "amount" integer DEFAULT NULL)[0m
+  ↳ db/migrate/20180613003624_remove_errors_from_funds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_funds_on_user_id_id" ON "funds" ("user_id_id")[0m
+  ↳ db/migrate/20180613003624_remove_errors_from_funds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_funds_on_project_id_id" ON "funds" ("project_id_id")[0m
+  ↳ db/migrate/20180613003624_remove_errors_from_funds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "funds" ("id","user_id_id","project_id_id","created_at","updated_at","amount")
+                     SELECT "id","user_id_id","project_id_id","created_at","updated_at","amount" FROM "afunds"[0m
+  ↳ db/migrate/20180613003624_remove_errors_from_funds.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "afunds"[0m
+  ↳ db/migrate/20180613003624_remove_errors_from_funds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "afunds" ("id" integer NOT NULL PRIMARY KEY, "user_id_id" integer DEFAULT NULL, "project_id_id" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "amount" integer DEFAULT NULL)[0m
+  ↳ db/migrate/20180613003624_remove_errors_from_funds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_afunds_on_project_id_id" ON "afunds" ("project_id_id")[0m
+  ↳ db/migrate/20180613003624_remove_errors_from_funds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_afunds_on_user_id_id" ON "afunds" ("user_id_id")[0m
+  ↳ db/migrate/20180613003624_remove_errors_from_funds.rb:4
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "afunds" ("id","user_id_id","project_id_id","created_at","updated_at","amount")
+                     SELECT "id","user_id_id","project_id_id","created_at","updated_at","amount" FROM "funds"[0m
+  ↳ db/migrate/20180613003624_remove_errors_from_funds.rb:4
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "funds"[0m
+  ↳ db/migrate/20180613003624_remove_errors_from_funds.rb:4
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "funds" ("id" integer NOT NULL PRIMARY KEY, "user_id_id" integer DEFAULT NULL, "project_id_id" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "amount" integer DEFAULT NULL)[0m
+  ↳ db/migrate/20180613003624_remove_errors_from_funds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_funds_on_user_id_id" ON "funds" ("user_id_id")[0m
+  ↳ db/migrate/20180613003624_remove_errors_from_funds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_funds_on_project_id_id" ON "funds" ("project_id_id")[0m
+  ↳ db/migrate/20180613003624_remove_errors_from_funds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "funds" ("id","user_id_id","project_id_id","created_at","updated_at","amount")
+                     SELECT "id","user_id_id","project_id_id","created_at","updated_at","amount" FROM "afunds"[0m
+  ↳ db/migrate/20180613003624_remove_errors_from_funds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "afunds"[0m
+  ↳ db/migrate/20180613003624_remove_errors_from_funds.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180613003624"]]
+  ↳ bin/rails:9
+  [1m[35m (7.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to RemoveMistakesFromFunds (20180613003959)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20180613003959_remove_mistakes_from_funds.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "afunds" ("id" integer NOT NULL PRIMARY KEY, "user_id_id" integer DEFAULT NULL, "project_id_id" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "amount" integer DEFAULT NULL)[0m
+  ↳ db/migrate/20180613003959_remove_mistakes_from_funds.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "tindex_afunds_on_project_id_id" ON "afunds" ("project_id_id")[0m
+  ↳ db/migrate/20180613003959_remove_mistakes_from_funds.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "tindex_afunds_on_user_id_id" ON "afunds" ("user_id_id")[0m
+  ↳ db/migrate/20180613003959_remove_mistakes_from_funds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "afunds" ("id","user_id_id","project_id_id","created_at","updated_at","amount")
+                     SELECT "id","user_id_id","project_id_id","created_at","updated_at","amount" FROM "funds"[0m
+  ↳ db/migrate/20180613003959_remove_mistakes_from_funds.rb:3
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE "funds"[0m
+  ↳ db/migrate/20180613003959_remove_mistakes_from_funds.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "funds" ("id" integer NOT NULL PRIMARY KEY, "project_id_id" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "amount" integer DEFAULT NULL)[0m
+  ↳ db/migrate/20180613003959_remove_mistakes_from_funds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_funds_on_project_id_id" ON "funds" ("project_id_id")[0m
+  ↳ db/migrate/20180613003959_remove_mistakes_from_funds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "funds" ("id","project_id_id","created_at","updated_at","amount")
+                     SELECT "id","project_id_id","created_at","updated_at","amount" FROM "afunds"[0m
+  ↳ db/migrate/20180613003959_remove_mistakes_from_funds.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "afunds"[0m
+  ↳ db/migrate/20180613003959_remove_mistakes_from_funds.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "afunds" ("id" integer NOT NULL PRIMARY KEY, "project_id_id" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "amount" integer DEFAULT NULL)[0m
+  ↳ db/migrate/20180613003959_remove_mistakes_from_funds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_afunds_on_project_id_id" ON "afunds" ("project_id_id")[0m
+  ↳ db/migrate/20180613003959_remove_mistakes_from_funds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "afunds" ("id","project_id_id","created_at","updated_at","amount")
+                     SELECT "id","project_id_id","created_at","updated_at","amount" FROM "funds"[0m
+  ↳ db/migrate/20180613003959_remove_mistakes_from_funds.rb:4
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "funds"[0m
+  ↳ db/migrate/20180613003959_remove_mistakes_from_funds.rb:4
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "funds" ("id" integer NOT NULL PRIMARY KEY, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "amount" integer DEFAULT NULL)[0m
+  ↳ db/migrate/20180613003959_remove_mistakes_from_funds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "funds" ("id","created_at","updated_at","amount")
+                     SELECT "id","created_at","updated_at","amount" FROM "afunds"[0m
+  ↳ db/migrate/20180613003959_remove_mistakes_from_funds.rb:4
+  [1m[35m (7.5ms)[0m  [1m[35mDROP TABLE "afunds"[0m
+  ↳ db/migrate/20180613003959_remove_mistakes_from_funds.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (2.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180613003959"]]
+  ↳ bin/rails:9
+  [1m[35m (46.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (4.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddCorrectreferencesToFunds (20180613004120)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "funds" ADD "user_id" integer[0m
+  ↳ db/migrate/20180613004120_add_correctreferences_to_funds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20180613004120_add_correctreferences_to_funds.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_funds_on_user_id" ON "funds" ("user_id")[0m
+  ↳ db/migrate/20180613004120_add_correctreferences_to_funds.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "funds" ADD "project_id" integer[0m
+  ↳ db/migrate/20180613004120_add_correctreferences_to_funds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_funds_on_project_id" ON "funds" ("project_id")[0m
+  ↳ db/migrate/20180613004120_add_correctreferences_to_funds.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180613004120"]]
+  ↳ bin/rails:9
+  [1m[35m (94.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2018-06-12 20:41:33 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/web/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from _app_views_pages_home_html_erb___3921384567975646695_70085281517960 at /home/web/Desktop/Untitled Folder 2/course-project-the-beehive/app/views/pages/home.html.erb:15)
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/pages/home.html.erb:16
+  Rendered pages/home.html.erb within layouts/application (86.3ms)
+  Rendered layouts/_rails_default.html.erb (520.3ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_sidenav.html.erb (5.7ms)
+  Rendered layouts/_footer.html.erb (1.6ms)
+Completed 200 OK in 643ms (Views: 620.5ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2018-06-12 20:41:34 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:107
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:26
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:27
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:29
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mPromise Load (0.2ms)[0m  [1m[34mSELECT "promises".* FROM "promises" WHERE "promises"."project_id" = ?[0m  [["project_id", 2]]
+  ↳ app/views/projects/show.html.erb:59
+  Rendered projects/show.html.erb within layouts/application (17.0ms)
+  Rendered layouts/_rails_default.html.erb (101.5ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_sidenav.html.erb (2.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 154ms (Views: 131.0ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/projects/4" for 127.0.0.1 at 2018-06-12 20:41:46 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:107
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:26
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:27
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:29
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mPromise Load (0.2ms)[0m  [1m[34mSELECT "promises".* FROM "promises" WHERE "promises"."project_id" = ?[0m  [["project_id", 4]]
+  ↳ app/views/projects/show.html.erb:59
+  Rendered projects/show.html.erb within layouts/application (14.6ms)
+  Rendered layouts/_rails_default.html.erb (105.5ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_sidenav.html.erb (3.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 152ms (Views: 139.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/projects/4/fund" for 127.0.0.1 at 2018-06-12 20:41:48 -0400
+Processing by FundsController#new as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/funds_controller.rb:3
+  Rendering funds/new.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered funds/new.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_rails_default.html.erb (88.1ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_sidenav.html.erb (2.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 120ms (Views: 112.0ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/projects/4/fund" for 127.0.0.1 at 2018-06-12 20:41:50 -0400
+Processing by FundsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7vds1JbzCoSjY9RZfw+1Qr76IRCxC6214e48uVfePl8TviigFMMBH2uwk9A4h8et0PTi6PVNDY0NZDLqCULlDw==", "fund"=>{"amount"=>"1", "user_id"=>"2", "project_id"=>"4"}, "commit"=>"Fund", "id"=>"4"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/funds_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/funds_controller.rb:11
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/funds_controller.rb:11
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/funds_controller.rb:11
+  [1m[36mFund Create (1.7ms)[0m  [1m[32mINSERT INTO "funds" ("created_at", "updated_at", "amount", "user_id", "project_id") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2018-06-13 00:41:50.400473"], ["updated_at", "2018-06-13 00:41:50.400473"], ["amount", 1], ["user_id", 2], ["project_id", 4]]
+  ↳ app/controllers/funds_controller.rb:11
+  [1m[35m (14.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/funds_controller.rb:11
+Redirected to http://localhost:3000/projects/4
+Completed 302 Found in 52ms (ActiveRecord: 18.4ms)
+
+
+Started GET "/projects/4" for 127.0.0.1 at 2018-06-12 20:41:50 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:107
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:26
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:27
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:29
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mPromise Load (0.2ms)[0m  [1m[34mSELECT "promises".* FROM "promises" WHERE "promises"."project_id" = ?[0m  [["project_id", 4]]
+  ↳ app/views/projects/show.html.erb:59
+  Rendered projects/show.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_rails_default.html.erb (95.7ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_sidenav.html.erb (4.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 123ms (Views: 116.8ms | ActiveRecord: 0.8ms)
+
+

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_12_005548) do
+ActiveRecord::Schema.define(version: 2018_06_13_004120) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -64,13 +64,13 @@ ActiveRecord::Schema.define(version: 2018_06_12_005548) do
   end
 
   create_table "funds", force: :cascade do |t|
-    t.integer "user_id_id"
-    t.integer "project_id_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "amount"
-    t.index ["project_id_id"], name: "index_funds_on_project_id_id"
-    t.index ["user_id_id"], name: "index_funds_on_user_id_id"
+    t.integer "user_id"
+    t.integer "project_id"
+    t.index ["project_id"], name: "index_funds_on_project_id"
+    t.index ["user_id"], name: "index_funds_on_user_id"
   end
 
   create_table "phones", force: :cascade do |t|
