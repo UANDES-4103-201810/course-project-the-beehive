@@ -16,11 +16,6 @@
     <hr>
     <p class="alertnonono">Links Available Only For Registered Users</p>
     <hr>
-    <p>Projects</p>
-    <a  class="nonono">New Project</a>
-    <a  class="nonono">My Projects</a>
-    <a  class="nonono">Projects Funded</a>
-    <a  class="nonono">Favourite Projects</a>
   <%else %>
     <% if @current_user.user_type == 'admin' %>
       <p>Admin options</p>
@@ -31,11 +26,11 @@
     <p>Projects</p>
     <%= link_to 'New Project', new_user_project_path(@current_user) %>
     <%= link_to 'My Projects', @current_user %>
-    <%= link_to 'All Projects' , projects_path %>
     <%= link_to 'Projects Funded' %>
     <%= link_to 'Favourite Projects' %>
   <%end %>
+  <%= link_to 'All Projects' , projects_path %>
 </div>
 
 <!-- Use any element to open the sidenav -->
-<span onclick="openNav()"><%= image_tag("Arrow.png", :alt => "open_sidebar", :size => "100x100") %></span>
+<span onclick="openNav()"><%= image_tag("Arrow.png", :alt => "open_sidebar", :size => "100x100", :position => "static") %></span>

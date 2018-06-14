@@ -29,6 +29,7 @@ class ProjectsController < ApplicationController
     @category = Category.find_by(id: @project.category_id)
     @funders = Fund.where(project_id: @project.id).count
     @amount = Fund.where(project_id: @project.id).sum(:amount)
+    @favorite=Favorite.where(project_id: @project.id, user_id: @user.id)
   end
 
   # GET /projects/new

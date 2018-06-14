@@ -1,6 +1,6 @@
 <% provide(:title, @user.name) %>
 <div class="row">
-  <aside class="col-md-4">
+  <aside class="col-md-6">
     <section class="user_info">
       <h3>
         <%= image_tag @user.avatar.url, alt: 'Avatar'%>
@@ -10,11 +10,6 @@
         <% if @current_user.id == @user.id %>
           <%= link_to 'Edit your account', edit_user_path(@user) %>
           <%= link_to 'Create a new project', new_user_project_path(@user) %>
-        <% else %>
-          <%= form_tag(controller: 'users', action: 'follow')%>
-          <%= hidden_field_tag :follower_id, @current_user.id %>
-          <%= hidden_field_tag :following_id, @user.id %>
-          <%= submit_tag "Follow", class: "btn" %>
         <% end %>
       <% end %>
     </section>
@@ -23,13 +18,14 @@
     <%= raw markdown(@user.description) %>
   <% end %>
 </div>
+<hr></hr>
 <div class="row">
   <aside class="col-md-8">
     <h3> Projects: </h3>
     <% @projects.each do |project| %>
-      <h2>
+      <h3>
         <%= link_to project.name , project_path(project) %>
-      </h2>
+      </h3>
     <% end %>
   </aside>
 </div>

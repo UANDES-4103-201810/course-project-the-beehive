@@ -24,7 +24,7 @@
 </p>
 
 <p>
-  <% if @category != nil %>
+  <% if @category.id != nil%>
   <strong>Category</strong>
   <%= @category.name %>
   <%end%>
@@ -43,10 +43,10 @@
   <%if @current_user.id == @user.id %>
     <%= link_to 'Add a new promise', new_project_promise_path(@project) %>
   <% else %>
-    <%= form_tag(controller: 'projects', action: 'favorite') %>
-    <%= hidden_field_tag :favorite_user, @current_user.id %>
-    <%= hidden_field_tag :favorite_project, @project.id %>
-    <%= submit_tag "Add to favorites", class: "btn" %>
+      <%= form_tag(controller: 'projects', action: 'favorite') %>
+      <%= hidden_field_tag :favorite_user, @current_user.id %>
+      <%= hidden_field_tag :favorite_project, @project.id %>
+      <%= submit_tag "Add to favorites", class: "btn" %>
 
     <%= link_to 'Fund this Project!', "/projects/"+@project.id.to_s+"/fund" %>
   <% end %>
@@ -73,8 +73,7 @@
       <%= promise.buyers %>
     </h5>
     <% if logged_in? %>
-      <% if @current_user.id == @user.id %>
-        <%= link_to 'Edit Promise', edit_promise_path %>
+      <% if @current_user.id == @user.id || @current_user.user_type=="admin"%>
         <%= link_to 'Destroy', promise, method: :delete, data: { confirm: 'Are you sure?' } %>
       <% else %>
         <%= link_to 'Buy this promise!' %>

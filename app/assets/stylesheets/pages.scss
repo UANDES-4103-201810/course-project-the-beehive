@@ -7,6 +7,10 @@ $gray-medium-light: #eaeaea;
 
 /* universal */
 
+.description{
+  text-align: left;
+}
+
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
   -webkit-box-sizing: border-box;
@@ -47,6 +51,9 @@ a{
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
+  color: white
+}
+p{
   color: white
 }
 
