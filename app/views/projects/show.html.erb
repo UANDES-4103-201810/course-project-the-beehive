@@ -24,9 +24,11 @@
 </p>
 
 <p>
+  <% if @category != nil %>
   <% if @category.id != nil%>
   <strong>Category</strong>
   <%= @category.name %>
+  <%end%>
   <%end%>
 </p>
 
