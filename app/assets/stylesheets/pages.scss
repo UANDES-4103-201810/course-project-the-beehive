@@ -13,10 +13,13 @@ $gray-medium-light: #eaeaea;
     font-size: 20px;
     color: black;
     display: block;
+    text-align: left;
+    background: rgba(255,204,0,1);
     transition: 0.3s;
     /* When you mouse over the navigation links, change their color */
     &:hover {
       color: #f1f1f1;
+      background: black;
     }
 }
 
