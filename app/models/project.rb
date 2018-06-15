@@ -9,11 +9,11 @@ class Project < ApplicationRecord
   validates :user, :goal, presence: true
 
 	def self.search(search)
-	  if search
-	    where('name LIKE ?', "%#{search}%")
-	  else
-	    all
-	  end
+	  	if search
+	  		where('name LIKE ?', "%#{search}%")
+	  	else
+	    	all
+	    end
 	end
 
 end

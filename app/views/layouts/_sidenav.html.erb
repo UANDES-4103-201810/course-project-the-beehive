@@ -26,7 +26,10 @@
     <p>Projects</p>
     <%= link_to 'New Project', new_user_project_path(@current_user) %>
     <%= link_to 'My Projects', @current_user %>
-    <%= link_to 'Projects Funded' %>
+    <%= form_tag projects_path, :method => 'get' do %>
+        <%= hidden_field_tag :fund , 1 %>
+        <%= submit_tag "Funded Projects"%>
+    <% end %>
     <%= link_to 'Favourite Projects' %>
   <%end %>
   <%= link_to 'All Projects' , projects_path %>

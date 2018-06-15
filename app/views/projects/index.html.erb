@@ -7,16 +7,35 @@
     <% end %>
     <h1> Projects: </h1>
     <% @projects.each do |project| %>
-      <h3>
-        <%= link_to project.name , project_path(project) %>
-        <% if logged_in? %>
-          <% if @current_user.user_type == 'admin' %>
-            <%= link_to 'Edit Project', edit_project_path(project) %>
-          <% end %>
-
+      <h1><%=@fund %></h1>
+      <% if @fund==true%>
+        <% @funds=Fund.where('user_id=?',current_user) %>
+        <% @funds.each do |fund| %>
+          <% if fund.project_id == project.id %>
+            <h3>
+              <%= link_to project.name , project_path(project) %>
+              <% if logged_in? %>
+                <% if @current_user.user_type == 'admin' %>
+                  <p>
+                    <%= link_to 'Edit Project', edit_project_path(project)%>
+                  </p>
+                <% end %>
+              <% end %>
+            </h3>
+          <%end%>
         <% end %>
-      </h3>
-
+      <% else %>
+        <h3>
+          <%= link_to project.name , project_path(project) %>
+          <% if logged_in? %>
+            <% if @current_user.user_type == 'admin' %>
+              <p>
+                <%= link_to 'Edit Project', edit_project_path(project)%>
+              </p>
+            <% end %>
+          <% end %>
+        </h3>
+      <% end %>
     <% end %>
   </aside>
 </div>

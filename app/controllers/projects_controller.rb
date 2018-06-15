@@ -18,6 +18,11 @@ class ProjectsController < ApplicationController
   # GET /projects.json
   def index
     @projects = Project.search(params[:search])
+    if params[:fund]=='1'
+      @fund=true
+    else
+      @fund=false
+    end
   end
 
   # GET /projects/1
