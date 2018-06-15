@@ -24,7 +24,7 @@
           <%end%>
         <% end %>
       <% else %>
-        <% if fav==true%>
+        <% if @fav==true%>
           <% @favorites=Favorite.where('user_id=?',current_user) %>
           <% @favorites.each do |fav| %>
             <% if fav.project_id == project.id %>
