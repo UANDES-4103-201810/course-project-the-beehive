@@ -43,12 +43,13 @@
   <%if @current_user.id == @user.id %>
     <%= link_to 'Add a new promise', new_project_promise_path(@project) %>
   <% else %>
+      <%= button_to 'Fund this Project!', "/projects/"+@project.id.to_s+"/fund" , :method=>"get"%>
       <%= form_tag(controller: 'projects', action: 'favorite') %>
       <%= hidden_field_tag :favorite_user, @current_user.id %>
       <%= hidden_field_tag :favorite_project, @project.id %>
       <%= submit_tag "Add to favorites", class: "btn" %>
 
-    <%= link_to 'Fund this Project!', "/projects/"+@project.id.to_s+"/fund" %>
+
   <% end %>
 <% end %>
 
