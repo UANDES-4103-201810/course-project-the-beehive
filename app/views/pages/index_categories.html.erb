@@ -1,10 +1,6 @@
 <% provide(:title, 'Categories') %>
 <div class="row">
   <aside class="col-md-4">
-    <%= form_tag projects_path, :method => 'get' do %>
-        <%= text_field_tag :search, params[:search] %>
-        <%= submit_tag "Search", :name => nil %>
-    <% end %>
     <h1> Categories: </h1>
     <% @categories.each do |category| %>
       <h3>
@@ -21,7 +17,7 @@
     <% if logged_in? %>
       <% if @current_user.user_type == 'admin' %>
         <%= form_for(:category, controller: 'pages', action: 'create_category') do |f| %>
-          <div class="col-md-2 col-md-offset-3">
+          <div class="col-md-6 col-md-offset-3">
               <%= f.label(:name,"New Category Name: ") %>
           </div>
           <div class="row">
