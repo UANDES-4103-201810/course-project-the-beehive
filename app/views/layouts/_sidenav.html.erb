@@ -27,10 +27,13 @@
     <%= link_to 'New Project', new_user_project_path(@current_user) %>
     <%= link_to 'My Projects', @current_user %>
     <%= form_tag projects_path, :method => 'get' do %>
-        <%= hidden_field_tag :fund , 1 %>
+        <%= hidden_field_tag :fav , 1 %>
         <%= submit_tag "Funded Projects"%>
     <% end %>
-    <%= link_to 'Favourite Projects' %>
+    <%= form_tag projects_path, :method => 'get' do %>
+      <%= hidden_field_tag :fund , 1 %>
+      <%= submit_tag "Favorite Projects"%>
+    <% end %>
   <%end %>
   <%= link_to 'All Projects' , projects_path %>
 </div>

@@ -23,6 +23,11 @@ class ProjectsController < ApplicationController
     else
       @fund=false
     end
+    if params[:fav]=='1'
+      @fav=true
+    else
+      @fav=false
+    end
   end
 
   # GET /projects/1

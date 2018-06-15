@@ -24,6 +24,23 @@
           <%end%>
         <% end %>
       <% else %>
+        <% if fav==true%>
+          <% @favorites=Favorite.where('user_id=?',current_user) %>
+          <% @favorites.each do |fav| %>
+            <% if fav.project_id == project.id %>
+              <h3>
+                <%= link_to project.name , project_path(project) %>
+                <% if logged_in? %>
+                  <% if @current_user.user_type == 'admin' %>
+                    <p>
+                      <%= link_to 'Edit Project', edit_project_path(project)%>
+                    </p>
+                  <% end %>
+                <% end %>
+              </h3>
+            <%end%>
+          <% end %>
+        <% else %>
         <h3>
           <%= link_to project.name , project_path(project) %>
           <% if logged_in? %>
@@ -36,6 +53,7 @@
         </h3>
       <% end %>
     <% end %>
+      <% end %>
   </aside>
 </div>
 <%= link_to 'Back', home_path %>
