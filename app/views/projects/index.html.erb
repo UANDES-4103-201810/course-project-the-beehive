@@ -7,7 +7,6 @@
     <% end %>
     <h1> Projects: </h1>
     <% @projects.each do |project| %>
-      <h1><%=@fund %></h1>
       <% if @fund==true%>
         <% @funds=Fund.where('user_id=?',current_user) %>
         <% @funds.each do |fund| %>
