@@ -13,6 +13,9 @@ Rails.application.routes.draw do
   get '/projects', to: 'projects#index'
   delete '/project/:id', to: 'projects#destroy'
 
+  get '/categories', to: 'pages#index_categories'
+  post '/categories', to: 'pages#create_category'
+
   get '/projects/:id/fund', to: 'funds#new'
   post '/projects/:id/fund', to: 'funds#create'
 

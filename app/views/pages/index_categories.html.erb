@@ -1,0 +1,40 @@
+<% provide(:title, 'Categories') %>
+<div class="row">
+  <aside class="col-md-4">
+    <%= form_tag projects_path, :method => 'get' do %>
+        <%= text_field_tag :search, params[:search] %>
+        <%= submit_tag "Search", :name => nil %>
+    <% end %>
+    <h1> Categories: </h1>
+    <% @categories.each do |category| %>
+      <h3>
+        <%= category.name %>
+        <% if logged_in? %>
+          <% if @current_user.user_type == 'admin' %>
+
+          <% end %>
+        <% end %>
+      </h3>
+
+    <% end %>
+
+    <% if logged_in? %>
+      <% if @current_user.user_type == 'admin' %>
+        <%= form_for(:category, controller: 'pages', action: 'create_category') do |f| %>
+          <div class="col-md-2 col-md-offset-3">
+              <%= f.label(:name,"New Category Name: ") %>
+          </div>
+          <div class="row">
+
+              <%= f.text_field :name %>
+
+              <%= f.submit "Create", class: "btn btn-primary" %>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    <% end %>
+
+  </aside>
+</div>
+<%= link_to 'Back', home_path %>
