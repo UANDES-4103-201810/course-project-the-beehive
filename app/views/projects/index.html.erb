@@ -7,16 +7,15 @@
     <% end %>
     <h1> Projects: </h1>
     <% @projects.each do |project| %>
-      <h4>
-        <%= link_to project.name , project_path(project) %>:
-        <%= project.description %>
+      <h3>
+        <%= link_to project.name , project_path(project) %>
         <% if logged_in? %>
           <% if @current_user.user_type == 'admin' %>
             <%= link_to 'Edit Project', edit_project_path(project) %>
           <% end %>
 
         <% end %>
-      </h4>
+      </h3>
 
     <% end %>
   </aside>

@@ -1,72 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="407fb4d1-9014-4ad9-b224-2236998bf148" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.rakeTasks" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/pages.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/pages.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/projects_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/projects_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/_sidenav.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_sidenav.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/pages/home.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/home.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/projects/_form default.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/projects/_form default.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/projects/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/projects/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/users/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/users/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/development.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db/development.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/test.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db/test.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/development.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/users/avatars/000/000/001/medium/napstablook.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/users/avatars/000/000/001/medium/napstablook.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/users/avatars/000/000/001/thumb/napstablook.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/users/avatars/000/000/001/thumb/napstablook.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/HS/HSAEe6nQUwl29F7G0ZpU66ktu92VY8ql62pSJwkpt28.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/HS/HSAEe6nQUwl29F7G0ZpU66ktu92VY8ql62pSJwkpt28.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/IJ/IJC4rGsdgY5gB6Iwev9JJJ0zRVmmmvjmZAd9TFogTIs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/IJ/IJC4rGsdgY5gB6Iwev9JJJ0zRVmmmvjmZAd9TFogTIs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/X_/X_JB9j6TSGU4mpI_VZX8JWir1SW4dAIxWDVoqqaY104.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/X_/X_JB9j6TSGU4mpI_VZX8JWir1SW4dAIxWDVoqqaY104.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/_B/_BLzGHo3KhHIMUG0vVz7V38nVTenI3WmFrGrH1cJfco.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/_B/_BLzGHo3KhHIMUG0vVz7V38nVTenI3WmFrGrH1cJfco.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/di/digqsw6L_JL7HNCht5-UwuBDZpZdGGwqvuDRIftLHg4.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/di/digqsw6L_JL7HNCht5-UwuBDZpZdGGwqvuDRIftLHg4.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/nx/nxInwSTJd6lAF2avhJ-pappackLC-kYuoL7HY7byRN0.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/nx/nxInwSTJd6lAF2avhJ-pappackLC-kYuoL7HY7byRN0.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/sj/sjn0M6Dm7mjJ6EgBsFh2DzmWmG2c8wknIR7NlpxU9No.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/sj/sjn0M6Dm7mjJ6EgBsFh2DzmWmG2c8wknIR7NlpxU9No.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/03/07417aff238297" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/03/07417aff238297" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/15/a256bc9b5b0b5d" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/15/a256bc9b5b0b5d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/17/126198fe22df1b" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/17/126198fe22df1b" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/1c/2b01897ba51c5c" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/1c/2b01897ba51c5c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/29/8e4c1d91d51f00" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/29/8e4c1d91d51f00" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/2c/5c753d85163aec" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/2c/5c753d85163aec" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/30/d15462064ae151" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/30/d15462064ae151" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/3d/52706e17b54353" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/3d/52706e17b54353" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/47/100be6c03f77f3" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/47/100be6c03f77f3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/4d/5df434d9ad4d0d" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/4d/5df434d9ad4d0d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/56/bf0c72d1479ba4" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/56/bf0c72d1479ba4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/57/082543329af33a" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/57/082543329af33a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/5d/7077bae220b83c" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/5d/7077bae220b83c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/5d/82aca14f5e5bc3" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/5d/82aca14f5e5bc3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/60/24a791a1e35c7d" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/60/24a791a1e35c7d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/62/721dd948b2b342" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/62/721dd948b2b342" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/64/8e545b51e2b3ea" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/64/8e545b51e2b3ea" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/78/2f0ee8d71653cf" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/78/2f0ee8d71653cf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/78/6eff6c5b6b5e75" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/78/6eff6c5b6b5e75" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/78/d06a05b787922b" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/78/d06a05b787922b" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/7c/7ba2c85380dc57" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/7c/7ba2c85380dc57" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/7e/8358ef001f52b1" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/7e/8358ef001f52b1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/85/83f2d29449a1c5" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/85/83f2d29449a1c5" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/92/0f350c98c1e6fb" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/92/0f350c98c1e6fb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/a7/47e5b2bcefded6" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/a7/47e5b2bcefded6" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/a9/531addd3cad9ab" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/a9/531addd3cad9ab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/b2/887c220510b5c6" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/b2/887c220510b5c6" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/b5/883b3c9f0fd0a3" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/b5/883b3c9f0fd0a3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/bd/ff8f65d7e4f37b" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/bd/ff8f65d7e4f37b" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/cc/429ea0acc960b1" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/cc/429ea0acc960b1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/cf/d6284b2fb9ef0e" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/cf/d6284b2fb9ef0e" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/d0/6ba353ba2f6cce" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/d0/6ba353ba2f6cce" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/d1/7762dbcbd555e9" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/d1/7762dbcbd555e9" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/db/a815d929577fb4" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/db/a815d929577fb4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/dc/c9c139dc86cdd1" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/dc/c9c139dc86cdd1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/e5/61fa46f20767ad" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/e5/61fa46f20767ad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/f0/6b5a65c06c1e4a" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/f0/6b5a65c06c1e4a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/f3/a2c3d97141639b" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/f3/a2c3d97141639b" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/f8/a2f440a49ecec2" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/f8/a2f440a49ecec2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/f9/53c1b3add0cf00" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/f9/53c1b3add0cf00" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/fd/aff12dd42bfe7b" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/fd/aff12dd42bfe7b" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-load-path-cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-load-path-cache" afterDir="false" />
-    </list>
+    <list default="true" id="407fb4d1-9014-4ad9-b224-2236998bf148" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
     <ignored path="$PROJECT_DIR$/public/system/" />
@@ -501,16 +436,15 @@
       <workItem from="1527356152228" duration="1237000" />
       <workItem from="1528742831335" duration="1830000" />
       <workItem from="1528859167361" duration="1045000" />
-      <workItem from="1529010181597" duration="229000" />
+      <workItem from="1529010181597" duration="829000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66891000" />
+    <option name="totallyTimeSpent" value="67491000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" visible="true" weight="0.32910052" />
